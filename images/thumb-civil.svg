@@ -1,0 +1,50 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e2d6e"/>
+      <stop offset="100%" style="stop-color:#3a4fa8"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- subtle grid -->
+  <g opacity="0.06" stroke="#fff" stroke-width="1">
+    <line x1="0" y1="200" x2="800" y2="200"/><line x1="0" y1="400" x2="800" y2="400"/>
+    <line x1="266" y1="0" x2="266" y2="600"/><line x1="532" y1="0" x2="532" y2="600"/>
+  </g>
+  <!-- main document -->
+  <rect x="250" y="80" width="240" height="320" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="2"/>
+  <!-- document lines -->
+  <g stroke="rgba(255,255,255,0.35)" stroke-width="3" stroke-linecap="round">
+    <line x1="286" y1="140" x2="454" y2="140"/>
+    <line x1="286" y1="170" x2="454" y2="170"/>
+    <line x1="286" y1="200" x2="420" y2="200"/>
+    <line x1="286" y1="240" x2="454" y2="240"/>
+    <line x1="286" y1="270" x2="454" y2="270"/>
+    <line x1="286" y1="300" x2="380" y2="300"/>
+  </g>
+  <!-- seal -->
+  <circle cx="420" cy="345" r="28" fill="none" stroke="rgba(255,220,100,0.7)" stroke-width="3"/>
+  <circle cx="420" cy="345" r="20" fill="rgba(255,220,100,0.18)" stroke="rgba(255,220,100,0.5)" stroke-width="2"/>
+  <!-- stamp check -->
+  <path d="M411,345 l7,7 14,-14" stroke="rgba(255,220,100,0.85)" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- second document (behind) -->
+  <rect x="310" y="60" width="220" height="300" rx="8" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="2" transform="rotate(6,420,210)"/>
+  <!-- pen -->
+  <g transform="translate(480,340) rotate(-35)" stroke-linecap="round">
+    <rect x="0" y="0" width="10" height="60" rx="2" fill="rgba(255,255,255,0.5)"/>
+    <polygon points="0,60 10,60 5,78" fill="rgba(255,220,100,0.8)"/>
+  </g>
+  <!-- handshake (simplified) -->
+  <g transform="translate(190,360)" opacity="0.38" stroke="#fff" stroke-width="4" stroke-linecap="round" fill="none">
+    <path d="M0,50 Q30,20 60,30 Q90,40 100,20"/>
+    <path d="M40,30 Q60,0 90,10"/>
+    <path d="M100,20 Q130,40 160,30 Q190,20 220,50"/>
+    <path d="M120,10 Q150,0 170,30"/>
+  </g>
+  <rect x="0" y="520" width="800" height="80" fill="rgba(0,0,0,0.3)"/>
+  <g transform="translate(56,44)" opacity="0.45">
+    <polygon points="0,0 0,52 14,44 14,28" fill="#fff"/>
+    <polygon points="14,28 14,44 36,52 36,8" fill="rgba(255,255,255,0.55)"/>
+    <polygon points="0,0 14,8 14,28 0,20" fill="rgba(255,255,255,0.75)"/>
+  </g>
+</svg>

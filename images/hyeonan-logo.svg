@@ -1,0 +1,6 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- H 심볼 (현안 CI 가이드 기반 재구성) -->
+  <polygon points="60,40 60,160 95,140 95,100" fill="#324b9e"/>
+  <polygon points="95,100 95,140 140,160 140,60" fill="#182e7b"/>
+  <polygon points="60,40 95,60 95,100 60,80" fill="#4a5fb0"/>
+</svg>

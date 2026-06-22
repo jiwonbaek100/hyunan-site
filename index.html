@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>법률사무소 현안 | 성남 분당 서현 부동산·형사·민사·가사 전문</title>
+<meta name="description" content="법률사무소 현안 성남 서현 사무소. 부동산, 형사, 민사, 가사 전문 변호사 상담." />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;700;900&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet" />
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans KR',sans-serif;
+    background:#faf9f6;
+    color:#1f1d1a;
+    line-height:1.7;
+    padding-bottom:64px; /* space for fixed CTA */
+  }
+  a{color:inherit;}
+  img{display:block; max-width:100%;}
+
+  :root{
+    --ink:#3e3a39;
+    --paper:#f7f7f8;
+    --line:#dcdde2;
+    --brass:#324b9e;
+    --brass-dark:#182e7b;
+    --mid:#6b6a6c;
+    --white:#ffffff;
+  }
+
+  /* ===== NAV ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:200;
+    display:flex; align-items:center; justify-content:space-between;
+    padding:1.1rem 6vw;
+    background:rgba(250,249,246,0.94);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .brand{
+    font-family:'Noto Serif KR',serif;
+    font-weight:900; font-size:1.25rem; letter-spacing:0.02em;
+    display:flex; align-items:center; gap:0.55rem;
+    text-decoration:none; color:inherit;
+  }
+  .brand img{ width:30px; height:32px; object-fit:contain; }
+  .brand .mark{color:var(--brass);}
+  nav ul{display:flex; gap:2.2rem; list-style:none;}
+  nav a{
+    font-size:0.85rem; text-decoration:none; color:var(--mid);
+    letter-spacing:0.02em; transition:color .2s;
+  }
+  nav a:hover{color:var(--brass-dark);}
+  @media(max-width:820px){
+    nav ul{display:none;}
+  }
+
+  /* ===== HERO ===== */
+  #hero{
+    position:relative;
+    min-height:100vh;
+    display:grid; grid-template-columns:1fr 480px; gap:0;
+    align-items:stretch;
+    border-bottom:1px solid var(--line);
+    overflow:hidden;
+  }
+  .hero-bg{
+    position:absolute; inset:0;
+    background-image:url('images/office-reception.jpg');
+    background-size:cover; background-position:center;
+    z-index:0;
+  }
+  .hero-bg::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(105deg,
+      rgba(24,46,123,0.92) 0%,
+      rgba(24,46,123,0.82) 45%,
+      rgba(24,46,123,0.1) 100%);
+  }
+  .hero-content{
+    position:relative; z-index:1;
+    padding:10rem 5vw 5rem 6vw;
+    display:flex; flex-direction:column; justify-content:center;
+  }
+  .hero-eyebrow{
+    font-size:0.78rem; letter-spacing:0.16em; color:rgba(255,255,255,0.7);
+    text-transform:uppercase; margin-bottom:1.4rem;
+    padding-left:0.9rem; border-left:3px solid rgba(255,255,255,0.5);
+  }
+  h1{
+    font-family:'Noto Serif KR',serif;
+    font-weight:900; line-height:1.28;
+    font-size:clamp(2rem,4vw,3.2rem);
+    letter-spacing:-0.01em;
+    margin-bottom:1.6rem;
+    color:#fff;
+  }
+  h1 .accent{color:#9ab0f0;}
+  .hero-lede{
+    color:rgba(255,255,255,0.78); font-size:1.02rem; max-width:46ch; margin-bottom:2.2rem;
+  }
+  .hero-btns{display:flex; gap:0.9rem; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:0.9rem 1.9rem;
+    font-size:0.88rem; font-weight:500; letter-spacing:0.02em;
+    text-decoration:none; border-radius:1px; cursor:pointer;
+    transition:all .2s; border:1px solid transparent;
+  }
+  .btn-fill{background:#fff; color:var(--brass-dark);}
+  .btn-fill:hover{background:#e8edf8; color:var(--brass-dark);}
+  .btn-line{border-color:rgba(255,255,255,0.6); color:#fff;}
+  .btn-line:hover{background:rgba(255,255,255,0.15);}
+
+  /* hero - attorney photo panel */
+  .hero-attorney{
+    position:relative; z-index:1;
+    display:flex; align-items:flex-end; justify-content:center;
+    padding-top:6rem;
+    overflow:hidden;
+  }
+  .hero-attorney::before{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(24,46,123,0.55) 0%, transparent 50%);
+  }
+  .hero-attorney img{
+    width:100%; max-width:400px;
+    height:auto; object-fit:contain;
+    object-position:bottom;
+    position:relative; z-index:1;
+    filter:drop-shadow(0 0 40px rgba(24,46,123,0.6));
+  }
+  .hero-attorney-badge{
+    position:absolute; bottom:3rem; left:50%; transform:translateX(-50%);
+    z-index:2; text-align:center; color:#fff;
+    background:rgba(24,46,123,0.75); backdrop-filter:blur(8px);
+    padding:0.8rem 1.6rem; border-radius:3px; border:1px solid rgba(255,255,255,0.15);
+    white-space:nowrap;
+  }
+  .hero-attorney-badge .att-badge-name{
+    font-family:'Noto Serif KR',serif; font-weight:700; font-size:1.05rem;
+  }
+  .hero-attorney-badge .att-badge-role{
+    font-size:0.78rem; color:rgba(255,255,255,0.7); margin-top:0.2rem;
+  }
+
+  @media(max-width:900px){
+    #hero{grid-template-columns:1fr; min-height:auto;}
+    .hero-attorney{max-height:340px;}
+    .hero-attorney img{max-width:260px;}
+    .hero-content{padding:8rem 6vw 3rem;}
+  }
+  @media(max-width:600px){
+    .hero-attorney{display:none;}
+  }
+
+  /* ===== SECTION BASE ===== */
+  .section-eyebrow{
+    font-size:0.74rem; letter-spacing:0.16em; text-transform:uppercase;
+    color:var(--brass-dark); margin-bottom:1rem;
+  }
+  h2{
+    font-family:'Noto Serif KR',serif; font-weight:700;
+    font-size:clamp(1.6rem,3vw,2.2rem); line-height:1.4; margin-bottom:1rem;
+  }
+
+  /* ===== INTRO LETTER + 배경사진 ===== */
+  #intro{
+    position:relative;
+    padding:6rem 6vw;
+    display:grid; grid-template-columns:1fr 0.9fr; gap:4rem; align-items:start;
+    max-width:100%;
+    overflow:hidden;
+  }
+  #intro .intro-bg{
+    position:absolute; inset:0;
+    background-image:url('images/office-hallway.jpg');
+    background-size:cover; background-position:center;
+    z-index:0;
+  }
+  #intro .intro-bg::after{
+    content:""; position:absolute; inset:0;
+    background:rgba(247,247,248,0.93);
+  }
+  #intro > *{ position:relative; z-index:1; }
+  .letter{
+    font-size:1rem; color:#3a362f; line-height:2;
+  }
+  .letter p{margin-bottom:1.3rem;}
+  .letter .sign{
+    margin-top:2rem; font-family:'Noto Serif KR',serif; font-weight:700; color:var(--ink);
+  }
+  .intro-photos{
+    display:grid; grid-template-columns:1fr 1fr; gap:0.8rem;
+  }
+  .intro-photos img{
+    width:100%; height:170px; object-fit:cover; border-radius:4px;
+    border:1px solid var(--line);
+  }
+  .intro-photos .wide{ grid-column:1 / -1; height:220px; }
+  @media(max-width:880px){
+    #intro{grid-template-columns:1fr; gap:2.4rem;}
+  }
+
+  /* ===== PRACTICE AREAS ===== */
+  #practice{
+    background:var(--white); padding:6rem 6vw;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .practice-head{max-width:640px; margin-bottom:3.2rem;}
+  .practice-head p{color:var(--mid); margin-top:0.8rem;}
+  .practice-grid{
+    display:grid; grid-template-columns:repeat(2,1fr); gap:0;
+    border-top:1px solid var(--line); border-left:1px solid var(--line);
+  }
+  .practice-card{
+    border-right:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:2.4rem 2.2rem;
+    transition:background .2s;
+  }
+  .practice-card:hover{background:#f5f2ea;}
+  .practice-num{
+    font-family:'Noto Serif KR',serif; font-size:0.85rem; color:var(--brass);
+    margin-bottom:0.9rem; letter-spacing:0.05em;
+  }
+  .practice-card h3{
+    font-family:'Noto Serif KR',serif; font-size:1.25rem; font-weight:700; margin-bottom:0.8rem;
+  }
+  .practice-card p{font-size:0.9rem; color:var(--mid); line-height:1.85;}
+  @media(max-width:720px){ .practice-grid{grid-template-columns:1fr;} }
+
+  /* ===== CASES (카드뉴스) ===== */
+  #cases{
+    background:var(--white); padding:6.5rem 6vw;
+    border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .cases-head{max-width:640px; margin-bottom:3.2rem;}
+  .cases-head p{color:var(--mid); margin-top:0.8rem;}
+
+  .case-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:1.8rem;
+  }
+  .case-card{
+    display:block; text-decoration:none; color:inherit;
+    border:1px solid var(--line); border-radius:6px;
+    overflow:hidden; background:var(--white);
+    transition:transform .25s, box-shadow .25s, border-color .25s;
+  }
+  .case-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 14px 32px rgba(24,46,123,0.12);
+    border-color:var(--brass);
+  }
+  .case-thumb{
+    position:relative; width:100%; padding-top:75%; /* 4:3 비율 */
+    overflow:hidden;
+  }
+  .case-thumb-row, .case-thumb img.bgimg{
+    position:absolute; left:0; right:0; bottom:0;
+  }
+  .case-thumb-row{
+    padding:1.1rem; display:flex; align-items:center; z-index:1;
+  }
+  .case-thumb::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,0.4) 100%);
+  }
+  .case-thumb img.bgimg{
+    top:0; width:100%; height:100%; object-fit:cover;
+  }
+  .case-thumb-logo{
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+    width:54px; height:54px; opacity:0.92;
+  }
+  .case-thumb-cat{
+    position:relative; z-index:1;
+    font-family:'Noto Serif KR',serif; color:#fff; font-weight:700;
+    font-size:0.92rem; letter-spacing:0.02em;
+  }
+  .case-body{ padding:1.4rem 1.3rem 1.6rem; }
+  .case-tags{display:flex; gap:0.5rem; align-items:center; flex-wrap:wrap;}
+  .case-tag{
+    font-size:0.72rem; letter-spacing:0.03em; color:var(--brass-dark);
+    background:#eef0f7; padding:0.28rem 0.6rem; border-radius:3px; font-weight:500;
+  }
+  .case-date{ font-size:0.72rem; color:var(--mid); letter-spacing:0.02em; }
+  .case-title{
+    font-family:'Noto Serif KR',serif; font-weight:700; font-size:1.02rem;
+    margin-top:0.7rem; line-height:1.5; transition:color .2s;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .case-card:hover .case-title{color:var(--brass-dark);}
+  .case-summary{
+    font-size:0.84rem; color:var(--mid); margin-top:0.55rem; line-height:1.75;
+    display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;
+  }
+  .case-blog-link{
+    display:inline-flex; align-items:center; gap:0.3rem; margin-top:0.9rem;
+    font-size:0.76rem; color:#03c75a; font-weight:600;
+  }
+  .case-note{
+    margin-top:2.6rem; font-size:0.82rem; color:var(--mid);
+    border-left:2px solid var(--line); padding-left:1rem; line-height:1.9;
+  }
+  @media(max-width:900px){ .case-grid{grid-template-columns:repeat(2, 1fr);} }
+  @media(max-width:600px){ .case-grid{grid-template-columns:1fr; gap:1.4rem;} }
+
+  /* ===== ATTORNEYS ===== */
+  #attorneys{padding:6.5rem 6vw;}
+  .att-head{max-width:600px; margin-bottom:3.5rem;}
+  .att-head p{color:var(--mid); margin-top:0.8rem;}
+  .attorney-list{display:flex; flex-direction:column; gap:0;}
+  .attorney{
+    display:grid; grid-template-columns:220px 1fr; gap:3rem;
+    padding:3rem 0; border-top:1px solid var(--line);
+  }
+  .attorney:last-child{border-bottom:1px solid var(--line);}
+  .att-photo{
+    width:100%; aspect-ratio:3/4; background:#e8eaf2;
+    border:1px solid var(--line); border-radius:4px;
+    overflow:hidden;
+  }
+  .att-photo img{ width:100%; height:100%; object-fit:cover; object-position:top center; }
+  .att-name{
+    font-family:'Noto Serif KR',serif; font-size:1.5rem; font-weight:700; margin-bottom:0.3rem;
+  }
+  .att-role{font-size:0.85rem; color:var(--brass-dark); letter-spacing:0.04em; margin-bottom:1.3rem;}
+  .att-creds{list-style:none; display:flex; flex-direction:column; gap:0.5rem;}
+  .att-creds li{
+    font-size:0.92rem; color:#3a362f; display:flex; gap:0.6rem; align-items:baseline;
+  }
+  .att-creds li::before{
+    content:"—"; color:var(--brass); flex-shrink:0;
+  }
+  @media(max-width:680px){
+    .attorney{grid-template-columns:130px 1fr; gap:1.6rem;}
+    .att-name{font-size:1.25rem;}
+  }
+
+  /* ===== PROMISE ===== */
+  #promise{
+    position:relative; color:#efece4; padding:5.5rem 6vw; overflow:hidden;
+  }
+  #promise .promise-bg{
+    position:absolute; inset:0;
+    background-image:url('images/office-lounge.jpg');
+    background-size:cover; background-position:center;
+    z-index:0;
+  }
+  #promise .promise-bg::after{
+    content:""; position:absolute; inset:0;
+    background:linear-gradient(135deg,rgba(24,46,123,0.92) 0%,rgba(50,75,158,0.88) 100%);
+  }
+  #promise > *{ position:relative; z-index:1; }
+  .promise-inner{max-width:720px; margin:0 auto; text-align:center;}
+  #promise .section-eyebrow{color:#8fa0d8;}
+  #promise h2{color:var(--white);}
+  .promise-text{font-size:1.05rem; color:#c4c8d8; line-height:2;}
+
+  /* ===== OFFICE GALLERY ===== */
+  #gallery{
+    padding:6.5rem 6vw; background:var(--white);
+    border-bottom:1px solid var(--line);
+  }
+  .gallery-head{max-width:640px; margin-bottom:3rem;}
+  .gallery-head p{color:var(--mid); margin-top:0.8rem;}
+  .gallery-grid{
+    display:grid; grid-template-columns:1.4fr 1fr 1fr; grid-template-rows:1fr 1fr; gap:0.9rem;
+    height:560px;
+  }
+  .gallery-grid img{
+    width:100%; height:100%; object-fit:cover; border-radius:4px;
+    border:1px solid var(--line);
+  }
+  .gallery-grid .g1{ grid-row:1 / 3; }
+  @media(max-width:880px){
+    .gallery-grid{grid-template-columns:1fr 1fr; grid-template-rows:repeat(3,200px); height:auto;}
+    .gallery-grid .g1{ grid-row:auto; grid-column:1 / 3; height:260px; }
+  }
+
+  /* ===== CONTACT ===== */
+  #contact{
+    position:relative; padding:6.5rem 6vw; border-top:1px solid var(--line); overflow:hidden;
+  }
+  #contact .contact-bg{
+    position:absolute; inset:0;
+    background-image:url('images/office-meeting.jpg');
+    background-size:cover; background-position:center;
+    z-index:0;
+  }
+  #contact .contact-bg::after{
+    content:""; position:absolute; inset:0;
+    background:rgba(247,247,248,0.94);
+  }
+  #contact > *{ position:relative; z-index:1; }
+  .contact-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:4rem;
+    max-width:1100px; margin:0 auto;
+  }
+  .contact-info dl{display:flex; flex-direction:column; gap:1.5rem; margin-bottom:2rem;}
+  .contact-info dt{font-size:0.74rem; letter-spacing:0.1em; color:var(--mid); margin-bottom:0.3rem;}
+  .contact-info dd{font-size:1.05rem; font-weight:500;}
+  .contact-info dd a{color:var(--brass-dark); text-decoration:none;}
+  .contact-info dd a:hover{text-decoration:underline;}
+  .contact-btn-row{display:flex; gap:0.8rem; flex-wrap:wrap;}
+  .btn-naver-inline{
+    display:inline-flex; align-items:center; gap:0.4rem;
+    background:#03c75a; color:#fff; padding:0.8rem 1.5rem;
+    font-size:0.88rem; font-weight:600; text-decoration:none; border-radius:3px;
+    transition:background .2s;
+  }
+  .btn-naver-inline:hover{background:#02a64c;}
+  .map-box{
+    position:relative;
+    border:1px solid var(--line); border-radius:4px; overflow:hidden;
+    min-height:360px; background:#e8eaf2;
+    text-decoration:none; color:inherit;
+    transition:border-color .2s, box-shadow .2s;
+    display:block;
+  }
+  .map-box:hover{ border-color:var(--brass); box-shadow:0 10px 28px rgba(24,46,123,0.1); }
+  .map-box-img{
+    width:100%; height:100%; min-height:360px;
+    object-fit:cover; object-position:center 40%;
+    display:block;
+  }
+  .map-box-overlay{
+    position:absolute; inset:0;
+    background:linear-gradient(to top, rgba(24,46,123,0.72) 0%, transparent 45%);
+    display:flex; flex-direction:column; align-items:center; justify-content:flex-end;
+    padding:1.8rem;
+    text-align:center;
+  }
+  .map-box-overlay .map-title{
+    font-family:'Noto Serif KR',serif; font-weight:700; font-size:1rem;
+    color:#fff; margin-bottom:0.4rem;
+  }
+  .map-box-overlay .map-sub{ font-size:0.78rem; color:rgba(255,255,255,0.78); margin-bottom:1rem; }
+  .map-box-overlay .map-cta{
+    display:inline-flex; align-items:center; gap:0.4rem;
+    background:#03c75a; color:#fff; padding:0.6rem 1.2rem;
+    font-size:0.82rem; font-weight:600; border-radius:3px;
+  }
+  @media(max-width:720px){ .contact-grid{grid-template-columns:1fr; gap:2.5rem;} }
+
+  /* ===== FOOTER ===== */
+  footer{
+    padding:2.5rem 6vw; text-align:center; font-size:0.78rem;
+    color:var(--mid); border-top:1px solid var(--line);
+  }
+  footer .disclaimer{max-width:520px; margin:0 auto 1rem; line-height:1.8;}
+
+  /* ===== FIXED BOTTOM CTA ===== */
+  .fixed-cta{
+    position:fixed; bottom:0; left:0; right:0; z-index:200;
+    display:grid; grid-template-columns:1fr 1fr 1fr;
+    border-top:1px solid var(--line);
+  }
+  .fixed-cta a{
+    text-align:center; padding:1.1rem 0.3rem;
+    text-decoration:none; font-size:0.86rem; font-weight:500; letter-spacing:0.01em;
+  }
+  .fixed-cta .cta-call{background:var(--ink); color:var(--white);}
+  .fixed-cta .cta-call:hover{background:var(--brass-dark);}
+  .fixed-cta .cta-naver{background:#03c75a; color:var(--white);}
+  .fixed-cta .cta-naver:hover{background:#02a64c;}
+  .fixed-cta .cta-loc{background:var(--brass); color:var(--white);}
+  .fixed-cta .cta-loc:hover{background:var(--brass-dark);}
+  @media(max-width:420px){
+    .fixed-cta a{font-size:0.78rem; padding:1rem 0.2rem;}
+  }
+
+  /* ===== FADE IN ===== */
+  .fade{opacity:1; transform:none;}
+  @media(prefers-reduced-motion:no-preference){
+    .fade.js{opacity:0; transform:translateY(16px); transition:opacity .6s ease, transform .6s ease;}
+    .fade.js.in{opacity:1; transform:none;}
+  }
+
+  @media(max-width:820px){
+    #hero{grid-template-columns:1fr; padding-top:7.5rem;}
+    .hero-side{border-left:none; padding-left:0; border-top:1px solid var(--line); padding-top:2rem;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a href="#hero" class="brand"><img src="images/hyeonan-logo.png" alt="현안 로고">법률사무소 <span class="mark">현안</span></a>
+  <nav>
+    <ul>
+      <li><a href="#intro">인사말</a></li>
+      <li><a href="#practice">업무분야</a></li>
+      <li><a href="#cases">성공사례</a></li>
+      <li><a href="#attorneys">변호사 소개</a></li>
+      <li><a href="#contact">오시는 길</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content fade">
+    <p class="hero-eyebrow">성남 분당 서현 · 법률사무소 현안</p>
+    <h1>의뢰인과 함께,<br>끝까지 걷는 <span class="accent">변호사</span></h1>
+    <p class="hero-lede">
+      서울 서초·역삼에서 쌓아온 경험을 바탕으로, 성남시 주민분들께
+      신뢰할 수 있는 법률 서비스를 제공하기 위해 서현동에 자리잡았습니다.
+    </p>
+    <div class="hero-btns">
+      <a href="#contact" class="btn btn-fill">상담 문의</a>
+      <a href="#practice" class="btn btn-line">업무분야 보기</a>
+    </div>
+  </div>
+  <div class="hero-attorney fade">
+    <img src="images/lawyer-ahn.png" alt="안지훈 변호사">
+    <div class="hero-attorney-badge">
+      <div class="att-badge-name">안지훈 변호사</div>
+      <div class="att-badge-role">부동산 · 상가임대차 · 공인중개사</div>
+    </div>
+  </div>
+</section>
+
+<!-- INTRO LETTER + 사무실 사진 -->
+<section id="intro">
+  <div class="intro-bg"></div>
+  <div class="letter fade">
+    <p class="section-eyebrow">인사말</p>
+    <h2>과장된 답변 대신,<br>정확한 답변을 드립니다</h2>
+    <p>
+      안녕하세요, 법률사무소 현안 성남 사무소입니다.
+      서울 서초, 역삼 지역에서 근무하던 변호사들이 성남시 주민분들께
+      더 가까이에서 좋은 법률 서비스를 제공하기 위해 서현동에 사무소를 개소했습니다.
+    </p>
+    <p>
+      법률사무소 현안의 변호사들은 부동산, 형사, 이혼 분야에서 여러 사건을 수행해왔습니다.
+      사건마다 깊이 고민한 끝에 의뢰인들과 합심하여, 어려운 길을 함께 걸어왔습니다.
+    </p>
+    <p>
+      예상하지 못한 법률 문제나 연락을 받으셨을 때, 어떻게 대응해야 할지
+      막막하실 수 있습니다. 이때 필요한 것은 전문적이고 성실한 변호사의 도움입니다.
+    </p>
+    <p>
+      언제든지 법률사무소 현안의 문을 두드려 주시기 바랍니다.
+      저희는 언제나 친절하고 정확하게 상담드리겠습니다.
+      수임을 위해 결코 과장된 답변을 드리지 않겠습니다.
+    </p>
+    <p class="sign">법률사무소 현안 드림</p>
+  </div>
+  <div class="intro-photos fade">
+    <img class="wide" src="images/office-entrance.jpg" alt="법률사무소 현안 입구">
+    <img src="images/office-reception.jpg" alt="리셉션 데스크">
+    <img src="images/office-lounge.jpg" alt="사무실 라운지">
+  </div>
+</section>
+
+<!-- PRACTICE AREAS -->
+<section id="practice">
+  <div class="practice-head fade">
+    <p class="section-eyebrow">업무분야</p>
+    <h2>네 가지 분야에서,<br>깊이 있는 경험</h2>
+    <p>각 사건의 본질을 정확히 짚고, 의뢰인의 입장에서 해결책을 제시합니다.</p>
+  </div>
+  <div class="practice-grid">
+    <div class="practice-card fade">
+      <div class="practice-num">01</div>
+      <h3>부동산</h3>
+      <p>상가임대차, 명도소송, 전세보증금 반환, 부동산 매매 분쟁, 재개발·재건축 분쟁 등 부동산 전반의 법률 문제를 다룹니다.</p>
+    </div>
+    <div class="practice-card fade">
+      <div class="practice-num">02</div>
+      <h3>형사</h3>
+      <p>고소·고발 대응, 피의자·피고인 변호, 영장실질심사, 형사합의 등 형사 사건 초기 대응부터 재판까지 함께합니다.</p>
+    </div>
+    <div class="practice-card fade">
+      <div class="practice-num">03</div>
+      <h3>민사</h3>
+      <p>손해배상청구, 계약 분쟁, 채무불이행, 부당이득반환 등 민사상 다양한 분쟁에 대한 소송 및 자문을 제공합니다.</p>
+    </div>
+    <div class="practice-card fade">
+      <div class="practice-num">04</div>
+      <h3>가사</h3>
+      <p>이혼 소송 및 조정, 재산분할, 양육권 분쟁 등 가사 사건을 세심하게 살피고 의뢰인의 편에서 진행합니다.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS CASES (카드뉴스) -->
+<section id="cases">
+  <div class="cases-head fade">
+    <p class="section-eyebrow">성공사례</p>
+    <h2>결과로 증명하는<br>법률사무소 현안</h2>
+    <p>의뢰인과 함께 해결해 온 사건들입니다. 카드를 누르면 네이버 블로그에 작성된 상세 글로 이동합니다.</p>
+  </div>
+
+  <div class="case-grid fade" id="case-preview-list">
+    <!-- 아래 스크립트의 CASES 데이터로 채워집니다 -->
+  </div>
+
+  <div style="margin-top:2.4rem;">
+    <a id="cases-more-link" href="https://blog.naver.com/an_law" target="_blank" rel="noopener" class="btn btn-line">네이버 블로그에서 더보기 →</a>
+  </div>
+
+  <p class="case-note fade">
+    ※ 게재된 사례는 의뢰인의 동의를 거쳐 신원을 알 수 없도록 일부 각색되었으며,
+    사건의 결과는 사안의 구체적 사실관계에 따라 달라질 수 있습니다.
+  </p>
+</section>
+
+<!-- ATTORNEYS -->
+<section id="attorneys">
+  <div class="att-head fade">
+    <p class="section-eyebrow">변호사 소개</p>
+    <h2>법률사무소 현안의 변호사</h2>
+    <p>각자의 전문 영역에서 깊이 있는 경험을 쌓아온 변호사들이 함께합니다.</p>
+  </div>
+  <div class="attorney-list">
+    <div class="attorney fade">
+      <div class="att-photo"><img src="images/lawyer-ahn.png" alt="안지훈 변호사"></div>
+      <div>
+        <div class="att-name">안지훈 변호사</div>
+        <div class="att-role">부동산 · 상가임대차 전문</div>
+        <ul class="att-creds">
+          <li>공인중개사</li>
+          <li>성년후견인 전문가 과정 수료</li>
+          <li>상가임대차, 명도 관련 사건 다수 수행</li>
+          <li>교통범죄, 이혼·상속 사건 수행</li>
+        </ul>
+      </div>
+    </div>
+    <div class="attorney fade">
+      <div class="att-photo"><img src="images/lawyer-park.png" alt="박준수 변호사"></div>
+      <div>
+        <div class="att-name">박준수 변호사</div>
+        <div class="att-role">형사 전문</div>
+        <ul class="att-creds">
+          <li>형사일반, 보험 사건 수행</li>
+          <li>대마·향정, 기타 마약 사건 수행</li>
+          <li>형사 사건 다수 수행</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROMISE -->
+<section id="promise">
+  <div class="promise-bg"></div>
+  <div class="promise-inner fade">
+    <p class="section-eyebrow">법률사무소 현안의 약속</p>
+    <h2>의뢰인과 합심하여,<br>끝까지 함께 걷겠습니다</h2>
+    <p class="promise-text">
+      성남시 주민 여러분이 법률 문제에 부딪히셨을 때 가장 먼저 떠올릴 수 있는 사무소가 되겠습니다.
+      친절하고 정확한 상담, 그리고 사건이 끝날 때까지 변하지 않는 책임감으로 함께하겠습니다.
+    </p>
+  </div>
+</section>
+
+<!-- OFFICE GALLERY -->
+<section id="gallery">
+  <div class="gallery-head fade">
+    <p class="section-eyebrow">사무실 둘러보기</p>
+    <h2>편안하게 찾아오실 수 있는 공간</h2>
+    <p>서현역 인근, 조용하고 신뢰감 있는 분위기에서 상담을 진행합니다.</p>
+  </div>
+  <div class="gallery-grid fade">
+    <img class="g1" src="images/office-hallway.jpg" alt="사무실 복도">
+    <img src="images/office-meeting.jpg" alt="회의실">
+    <img src="images/office-lounge.jpg" alt="라운지 그림 액자">
+    <img src="images/office-reception.jpg" alt="리셉션 데스크">
+    <img src="images/office-entrance.jpg" alt="사무소 입구">
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="contact-bg"></div>
+  <div class="contact-grid">
+    <div class="contact-info fade">
+      <p class="section-eyebrow">오시는 길</p>
+      <h2>법률사무소 현안<br>성남 사무소</h2>
+      <dl>
+        <div>
+          <dt>주소</dt>
+          <dd>경기도 성남시 분당구 서현로 216, 2층 201호</dd>
+        </div>
+        <div>
+          <dt>전화</dt>
+          <dd><a href="tel:031-706-6544">031-706-6544</a></dd>
+        </div>
+        <div>
+          <dt>상담 시간</dt>
+          <dd>평일 09:00 – 18:00 (사전 예약 권장)</dd>
+        </div>
+      </dl>
+      <div class="contact-btn-row">
+        <a id="naver-booking-inline" href="https://m.place.naver.com/place/2054503954/ticket" target="_blank" rel="noopener" class="btn-naver-inline">📅 네이버에서 예약하기</a>
+        <a href="tel:031-706-6544" class="btn btn-line">전화 상담</a>
+      </div>
+    </div>
+    <a class="map-box fade" href="https://map.naver.com/p/entry/place/2054503954" target="_blank" rel="noopener">
+      <img class="map-box-img" src="images/map-location.svg" alt="법률사무소 현안 위치 지도 - 서현역 인근">
+      <div class="map-box-overlay">
+        <div class="map-title">법률사무소 현안 성남 사무소</div>
+        <div class="map-sub">경기도 성남시 분당구 서현로 216, 2층 201호</div>
+        <span class="map-cta">네이버 지도에서 보기 ↗</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<footer>
+  <p class="disclaimer">
+    본 사이트에 게시된 내용은 일반적인 법률정보로, 개별 사건에 대한 법률 자문이 아닙니다.
+  </p>
+  <p>법률사무소 현안 · 경기도 성남시 분당구 서현로 216, 2층 201호 · 031-706-6544</p>
+  <p>© 2026 법률사무소 현안. All rights reserved.</p>
+</footer>
+
+<!-- FIXED BOTTOM CTA -->
+<div class="fixed-cta">
+  <a href="tel:031-706-6544" class="cta-call">📞 전화 상담</a>
+  <a id="naver-booking-fixed" href="https://m.place.naver.com/place/2054503954/ticket" target="_blank" rel="noopener" class="cta-naver">📅 네이버 예약</a>
+  <a href="#contact" class="cta-loc">📍 오시는 길</a>
+</div>
+
+<script>
+  /* ============================================================
+     📌 성공사례 데이터
+     ============================================================
+     사례를 추가/수정할 때는 아래 CASES 배열을 고쳐주세요.
+     자세한 작성법은 "사례추가가이드.md" 파일을 참고하세요.
+  */
+  const CASES = [
+    {
+      category: "부동산",
+      tag: "부동산 · 명도",
+      title: "상가 임차인 명도 거부, 소제기 3개월 만에 인도 완료",
+      summary: "임대차 만료 후에도 점포 인도를 거부한 임차인을 상대로 명도소송과 점유이전금지가처분을 병행해 신속히 인도를 받아낸 사례입니다.",
+      date: "2026-05-10",
+      blogUrl: "https://blog.naver.com/an_law/224319618023",
+      image: "images/thumb-realestate.svg"
+    },
+    {
+      category: "형사",
+      tag: "형사 · 불기소",
+      title: "사기 혐의 고소 사건, 수사 단계 적극 대응으로 혐의없음 처분",
+      summary: "거래 상대방의 사기 고소로 경찰 조사를 앞둔 의뢰인을 위해 고의성 부존재를 입증하는 의견서를 작성하고 조사에 동석한 사례입니다.",
+      date: "2026-04-22",
+      blogUrl: "https://blog.naver.com/an_law/224043576270",
+      image: "images/thumb-criminal.svg"
+    },
+    {
+      category: "민사",
+      tag: "민사 · 손해배상",
+      title: "민사 손해배상 사건, 의뢰인의 권리를 철저히 대리한 사례",
+      summary: "법률적 다툼이 발생한 민사 사건에서 의뢰인의 입장을 면밀히 분석하고, 증거를 체계적으로 정리해 유리한 결과를 이끌어낸 사례입니다.",
+      date: "2026-03-20",
+      blogUrl: "https://blog.naver.com/an_law/223872330881",
+      image: "images/thumb-civil.svg"
+    },
+    {
+      category: "가사",
+      tag: "가사 · 재산분할",
+      title: "장기 별거 이혼 사건, 재산분할 비율 협상으로 유리한 조정 성립",
+      summary: "장기간 별거 중이던 의뢰인의 숨겨진 배우자 재산을 사실조회로 파악하고, 혼인 중 기여도를 입증해 분할 비율을 상향시킨 사례입니다.",
+      date: "2026-03-15",
+      blogUrl: "https://blog.naver.com/an_law",
+      image: "images/thumb-family.svg"
+    }
+  ];
+
+  const CATEGORY_THEME = {
+    "부동산": "linear-gradient(135deg,#324b9e,#182e7b)",
+    "형사":   "linear-gradient(135deg,#3e3a39,#182e7b)",
+    "민사":   "linear-gradient(135deg,#4a5fb0,#2a3d8f)",
+    "가사":   "linear-gradient(135deg,#5a6bb5,#324b9e)",
+  };
+
+  function renderCaseCard(c) {
+    const gradient = CATEGORY_THEME[c.category] || CATEGORY_THEME["민사"];
+    const bg = c.image
+      ? `style="background:${gradient}"`
+      : `style="background:${gradient}"`;
+    const imgEl = c.image
+      ? `<img class="bgimg" src="${c.image}" alt="${c.title}" loading="lazy" />`
+      : `<img class="case-thumb-logo" src="images/hyeonan-logo.png" alt="법률사무소 현안 로고" />`;
+    return `
+      <a class="case-card" href="${c.blogUrl}" target="_blank" rel="noopener">
+        <div class="case-thumb" ${bg}>
+          ${imgEl}
+          <div class="case-thumb-row">
+            <span class="case-thumb-cat">${c.category}</span>
+          </div>
+        </div>
+        <div class="case-body">
+          <div class="case-tags">
+            <span class="case-tag">${c.tag}</span>
+            ${c.date ? `<span class="case-date">${c.date}</span>` : ''}
+          </div>
+          <div class="case-title">${c.title}</div>
+          <p class="case-summary">${c.summary}</p>
+          <span class="case-blog-link">네이버 블로그에서 보기 ↗</span>
+        </div>
+      </a>
+    `;
+  }
+
+  // 성공사례 카드뉴스 렌더링 (최신순) — 누르면 네이버 블로그로 이동(새 탭)
+  const previewList = document.getElementById('case-preview-list');
+  if (previewList) {
+    const sorted = [...CASES].sort((a,b) => (b.date||'').localeCompare(a.date||''));
+    previewList.innerHTML = sorted.map(renderCaseCard).join('');
+  }
+
+  // 스크롤 페이드인
+  const fadeEls = document.querySelectorAll('.fade');
+  if ('IntersectionObserver' in window) {
+    fadeEls.forEach(el => el.classList.add('js'));
+    const obs = new IntersectionObserver(es=>{
+      es.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('in'); });
+    },{threshold:0.1});
+    fadeEls.forEach(el=>obs.observe(el));
+  }
+</script>
+</body>
+</html>

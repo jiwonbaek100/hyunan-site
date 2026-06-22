@@ -1,0 +1,48 @@
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a1e6e"/>
+      <stop offset="100%" style="stop-color:#4a5fb0"/>
+    </linearGradient>
+    <linearGradient id="glow" cx="50%" cy="50%" r="50%" fx="50%" fy="50%">
+      <stop offset="0%" style="stop-color:#fff;stop-opacity:0.12"/>
+      <stop offset="100%" style="stop-color:#fff;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <!-- soft glow center -->
+  <ellipse cx="400" cy="280" rx="280" ry="220" fill="url(#glow)"/>
+  <!-- house outline -->
+  <g transform="translate(260,90)" stroke="rgba(255,255,255,0.6)" fill="none" stroke-width="4" stroke-linejoin="round">
+    <polygon points="140,0 280,110 0,110" fill="rgba(255,255,255,0.08)"/>
+    <rect x="20" y="110" width="240" height="180" fill="rgba(255,255,255,0.06)"/>
+    <!-- door -->
+    <rect x="110" y="200" width="60" height="90" rx="30" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.4)" stroke-width="3"/>
+    <!-- windows -->
+    <rect x="40" y="140" width="60" height="50" rx="4" fill="rgba(255,220,100,0.18)" stroke="rgba(255,220,100,0.6)" stroke-width="2.5"/>
+    <rect x="180" y="140" width="60" height="50" rx="4" fill="rgba(255,220,100,0.18)" stroke="rgba(255,220,100,0.6)" stroke-width="2.5"/>
+    <line x1="70" y1="140" x2="70" y2="190" stroke-width="1.5"/><line x1="40" y1="165" x2="100" y2="165" stroke-width="1.5"/>
+    <line x1="210" y1="140" x2="210" y2="190" stroke-width="1.5"/><line x1="180" y1="165" x2="240" y2="165" stroke-width="1.5"/>
+  </g>
+  <!-- heart -->
+  <g transform="translate(364,96)">
+    <path d="M36,12 C36,6 30,0 22,0 C14,0 8,6 8,14 C8,30 36,50 36,50 C36,50 64,30 64,14 C64,6 58,0 50,0 C42,0 36,6 36,12Z"
+      fill="rgba(255,100,120,0.75)" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+  </g>
+  <!-- two figure silhouettes -->
+  <g opacity="0.32" fill="#fff">
+    <circle cx="340" cy="435" r="22"/>
+    <ellipse cx="340" cy="495" rx="28" ry="36"/>
+    <circle cx="465" cy="435" r="22"/>
+    <ellipse cx="465" cy="495" rx="28" ry="36"/>
+    <!-- child -->
+    <circle cx="403" cy="446" r="16"/>
+    <ellipse cx="403" cy="494" rx="20" ry="28"/>
+  </g>
+  <rect x="0" y="530" width="800" height="70" fill="rgba(0,0,0,0.3)"/>
+  <g transform="translate(56,44)" opacity="0.45">
+    <polygon points="0,0 0,52 14,44 14,28" fill="#fff"/>
+    <polygon points="14,28 14,44 36,52 36,8" fill="rgba(255,255,255,0.55)"/>
+    <polygon points="0,0 14,8 14,28 0,20" fill="rgba(255,255,255,0.75)"/>
+  </g>
+</svg>

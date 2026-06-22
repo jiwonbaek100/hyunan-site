@@ -1,0 +1,93 @@
+<svg width="900" height="560" viewBox="0 0 900 560" xmlns="http://www.w3.org/2000/svg" font-family="Apple SD Gothic Neo, Noto Sans KR, sans-serif">
+
+  <!-- 배경 -->
+  <rect width="900" height="560" fill="#f4f0e8"/>
+
+  <!-- ── 도로망 ── -->
+  <!-- 서현로 (세로 주간선) -->
+  <rect x="392" y="0" width="32" height="560" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <line x1="408" y1="0" x2="408" y2="560" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="18,12"/>
+
+  <!-- 황새울로 (가로 주간선) -->
+  <rect x="0" y="245" width="900" height="28" fill="#fff" stroke="#ddd" stroke-width="1"/>
+  <line x1="0" y1="259" x2="900" y2="259" stroke="#e0e0e0" stroke-width="1.5" stroke-dasharray="18,12"/>
+
+  <!-- 탄천변로 (황색 대로) -->
+  <rect x="685" y="0" width="24" height="560" fill="#fde8b0" stroke="#e8c870" stroke-width="1.5"/>
+
+  <!-- 상단 가로 도로 -->
+  <rect x="0" y="86" width="900" height="18" fill="#fff" stroke="#ddd" stroke-width="0.8"/>
+
+  <!-- 하단 가로 도로 -->
+  <rect x="0" y="440" width="900" height="18" fill="#fff" stroke="#ddd" stroke-width="0.8"/>
+
+  <!-- 좌측 세로 도로 -->
+  <rect x="165" y="0" width="20" height="560" fill="#fff" stroke="#ddd" stroke-width="0.8"/>
+
+  <!-- ── 분당천 ── -->
+  <path d="M0,482 Q150,470 300,482 Q450,494 600,482 Q720,472 900,484" stroke="#b8ddf0" stroke-width="22" fill="none"/>
+  <path d="M0,482 Q150,470 300,482 Q450,494 600,482 Q720,472 900,484" stroke="#d4eeff" stroke-width="12" fill="none"/>
+
+  <!-- ── 블록 (단순화) ── -->
+  <rect x="4" y="4" width="155" height="235" fill="#ece8dc" rx="2"/>
+  <rect x="10" y="10" width="143" height="100" fill="#ddd8cc" rx="2"/>
+  <rect x="10" y="118" width="143" height="115" fill="#ddd8cc" rx="2"/>
+
+  <rect x="192" y="4" width="192" height="75" fill="#ece8dc" rx="2"/>
+  <rect x="200" y="10" width="178" height="63" fill="#ddd8cc" rx="2"/>
+
+  <rect x="432" y="4" width="244" height="75" fill="#ece8dc" rx="2"/>
+  <rect x="440" y="10" width="228" height="63" fill="#ddd8cc" rx="2"/>
+
+  <rect x="432" y="104" width="244" height="133" fill="#ece8dc" rx="2"/>
+  <rect x="440" y="110" width="228" height="121" fill="#ddd8cc" rx="2"/>
+
+  <rect x="4" y="280" width="155" height="152" fill="#ece8dc" rx="2"/>
+  <rect x="10" y="286" width="143" height="140" fill="#ddd8cc" rx="2"/>
+
+  <rect x="192" y="280" width="192" height="152" fill="#ece8dc" rx="2"/>
+  <rect x="200" y="286" width="178" height="140" fill="#ddd8cc" rx="2"/>
+
+  <rect x="432" y="280" width="244" height="152" fill="#ece8dc" rx="2"/>
+  <rect x="440" y="286" width="228" height="140" fill="#ddd8cc" rx="2"/>
+
+  <!-- 분당중앙공원 -->
+  <ellipse cx="800" cy="310" rx="78" ry="100" fill="#cce8b8" stroke="#aacc98" stroke-width="1.5"/>
+  <circle cx="778" cy="292" r="13" fill="#aad498" opacity="0.8"/>
+  <circle cx="805" cy="280" r="16" fill="#aad498" opacity="0.8"/>
+  <circle cx="826" cy="298" r="12" fill="#aad498" opacity="0.8"/>
+  <circle cx="790" cy="326" r="15" fill="#aad498" opacity="0.8"/>
+  <circle cx="818" cy="338" r="12" fill="#aad498" opacity="0.8"/>
+  <text x="800" y="315" text-anchor="middle" font-size="11.5" font-weight="600" fill="#4a7840">분당중앙공원</text>
+
+  <!-- ── 도로 레이블 ── -->
+  <text x="408" y="136" text-anchor="middle" font-size="12" fill="#888" letter-spacing="2">서현로</text>
+  <text x="100" y="252" text-anchor="middle" font-size="11.5" fill="#888">황새울로</text>
+  <text x="697" y="255" text-anchor="middle" font-size="10" fill="#b08020" transform="rotate(90,697,255)">탄천변로</text>
+  <text x="195" y="499" text-anchor="middle" font-size="12" fill="#5aaad8" font-style="italic">분당천</text>
+
+  <!-- ── 서현역 ── -->
+  <circle cx="408" cy="259" r="19" fill="#fff" stroke="#f5a800" stroke-width="4"/>
+  <circle cx="408" cy="259" r="11" fill="#f5a800"/>
+  <text x="408" y="300" text-anchor="middle" font-size="14" font-weight="700" fill="#222">서현역</text>
+
+  <!-- ── 현안 위치 핀 ── -->
+  <!-- 핀 그림자 -->
+  <ellipse cx="462" cy="228" rx="11" ry="4.5" fill="rgba(0,0,0,0.18)"/>
+  <!-- 핀 몸통 -->
+  <path d="M462,158 C440,158 422,176 422,198 C422,228 462,256 462,256 C462,256 502,228 502,198 C502,176 484,158 462,158Z"
+        fill="#1a5cff" stroke="#fff" stroke-width="3"/>
+  <circle cx="462" cy="196" r="12" fill="#fff"/>
+  <circle cx="462" cy="196" r="5.5" fill="#1a5cff"/>
+
+  <!-- 말풍선 -->
+  <rect x="498" y="174" width="194" height="46" rx="23" fill="#fff" stroke="#1a5cff" stroke-width="2.5"/>
+  <path d="M506,194 L496,200 L506,206" fill="#fff" stroke="#1a5cff" stroke-width="2.2" stroke-linejoin="round"/>
+  <circle cx="518" cy="200" r="7" fill="#1a5cff"/>
+  <text x="610" y="205" text-anchor="middle" font-size="15.5" font-weight="800" fill="#1a5cff">법률사무소 현안</text>
+
+  <!-- ── 하단 안내바 ── -->
+  <rect x="0" y="534" width="900" height="26" fill="rgba(24,46,123,0.82)"/>
+  <text x="20" y="551" font-size="11.5" fill="rgba(255,255,255,0.92)">📍 서현역 1번출구 도보 2분 · 경기도 성남시 분당구 서현로 216, 2층 201호</text>
+
+</svg>
