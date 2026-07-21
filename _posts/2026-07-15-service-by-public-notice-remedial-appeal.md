@@ -5,7 +5,7 @@ date: 2026-07-15
 category: 성공사례
 practice: 부동산·민사소송
 author: 법률사무소 현안
-image: /images/office-reception.jpg
+image: /images/case-remedial-appeal-judgment-order.png
 published: true
 ---
 
@@ -28,8 +28,6 @@ published: true
 ![추완상고 상고이유서 초안을 검토한 의뢰인의 실제 피드백. 개인정보와 문서 식별정보는 가렸습니다.](/images/case-remedial-appeal-client-feedback.png)
 
 *상고이유서 초안 검토 및 수정 과정에서 받은 의뢰인 피드백입니다. 개인정보와 문서 식별정보는 비식별 처리했습니다.*
-
-![법률사무소 현안 상담 공간](/images/office-meeting.jpg)
 
 ## 핵심 쟁점: 등기 명의와 실질적인 임대인 지위
 
