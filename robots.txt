@@ -1,0 +1,25 @@
+# Search engines and AI answer engines may crawl and reference this public website.
+User-agent: *
+Allow: /
+
+# Permit major AI search and answer crawlers.
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+Content-Signal: search=yes,ai-input=yes,ai-train=no,use=reference
+Sitemap: https://hyunan.kr/sitemap.xml
