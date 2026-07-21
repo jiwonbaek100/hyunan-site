@@ -1,0 +1,51 @@
+media:
+  input: images/uploads
+  output: /images/uploads
+
+content:
+  - name: insights
+    label: 인사이트·성공사례
+    type: collection
+    path: _posts
+    view:
+      fields: [title, date, category, published]
+      primary: title
+      sort: [date, title]
+      default:
+        sort: date
+        order: desc
+    fields:
+      - name: title
+        label: 제목
+        type: string
+      - name: description
+        label: 목록에 보일 요약
+        type: text
+      - name: date
+        label: 발행일
+        type: date
+      - name: category
+        label: 글 유형
+        type: select
+        options:
+          values: [성공사례, 법률정보, 현안소식]
+      - name: practice
+        label: 업무분야
+        type: select
+        options:
+          values: [부동산, 형사, 학교폭력, 민사·집행, 가사, 기타]
+      - name: author
+        label: 작성자
+        type: string
+        default: 법률사무소 현안
+      - name: image
+        label: 대표 이미지
+        type: image
+        default: /images/office-meeting.jpg
+      - name: published
+        label: 공개
+        type: boolean
+        default: true
+      - name: body
+        label: 본문
+        type: rich-text

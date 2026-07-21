@@ -1,0 +1,16 @@
+title: 법률사무소 현안
+description: 성남·분당의 부동산, 형사, 학교폭력, 민사 법률사무소
+url: https://hyunan.kr
+lang: ko-KR
+timezone: Asia/Seoul
+permalink: /insights/:title/
+future: false
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: 법률사무소 현안
+      image: /images/office-meeting.jpg

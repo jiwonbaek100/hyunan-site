@@ -1,0 +1,25 @@
+<div class="intake-modal" id="intakeModal" aria-hidden="true">
+  <div class="intake-backdrop" data-intake-close></div>
+  <section class="intake-panel" role="dialog" aria-modal="true" aria-labelledby="intakeTitle">
+    <div class="intake-head"><div><p>Case inquiry</p><h2 id="intakeTitle">사건 문의 접수</h2></div><button class="intake-close" type="button" data-intake-close aria-label="닫기">×</button></div>
+    <p class="intake-guide">현재 상황을 간단히 남겨주시면 확인 후 연락드리겠습니다. 이해충돌 확인 전에는 주민등록번호, 계좌 비밀번호, 상세한 비밀정보를 적지 마세요.</p>
+    <form id="intakeForm">
+      <div class="intake-fields">
+        <label><span>성함 *</span><input name="name" autocomplete="name" maxlength="40" required></label>
+        <label><span>연락처 *</span><input name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="010-0000-0000" required></label>
+        <label><span>이메일</span><input name="email" type="email" autocomplete="email" maxlength="120"></label>
+        <label><span>사건 분야 *</span><select name="matterType" required><option value="">선택</option><option>부동산</option><option>형사</option><option>학교폭력</option><option>민사·집행</option><option>가사</option><option>기타</option></select></label>
+        <label><span>현재 단계</span><select name="stage"><option value="">선택</option><option>상담 전</option><option>내용증명·고소 전</option><option>경찰·검찰 조사 중</option><option>소송·재판 중</option><option>판결·집행 단계</option><option>기타</option></select></label>
+        <label><span>상대방 이름·회사</span><input name="opponent" maxlength="80" placeholder="이해충돌 확인용"></label>
+        <label class="intake-full"><span>중요 일정</span><input name="deadline" maxlength="80" placeholder="조사일, 답변서 제출일 등"></label>
+        <label class="intake-full"><span>문의 내용 * <b id="summaryCount">0/1000</b></span><textarea name="summary" maxlength="1000" required placeholder="무슨 일이 있었는지, 현재 가장 궁금한 점을 적어주세요."></textarea></label>
+        <label class="intake-hp" aria-hidden="true"><span>회사</span><input name="company" tabindex="-1" autocomplete="off"></label>
+      </div>
+      <label class="intake-check"><input type="checkbox" name="privacy" required><span><a href="/privacy/" target="_blank">개인정보 수집·이용 안내</a>에 동의합니다. *</span></label>
+      <label class="intake-check"><input type="checkbox" name="notice" required><span>문의 접수만으로 변호사 선임 관계가 성립하지 않으며, 이해충돌 확인 전 민감한 비밀정보를 보내지 않는다는 점을 확인했습니다. *</span></label>
+      <input type="hidden" name="startedAt">
+      <button class="intake-submit" type="submit">문의 접수하기</button>
+      <p class="intake-status" id="intakeStatus" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+</div>
