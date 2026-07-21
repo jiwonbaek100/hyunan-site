@@ -10,5 +10,9 @@ layout: null
     <priority>1.0</priority>
   </url>
   <url><loc>https://hyunan.kr/insights/</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hyunan.kr/lawyers/ahn-jihoon/</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hyunan.kr/services/real-estate/</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://hyunan.kr/services/commercial-lease/</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://hyunan.kr/services/eviction/</loc><lastmod>2026-07-21</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   {% for post in site.posts %}<url><loc>{{ post.url | absolute_url }}</loc><lastmod>{{ post.date | date_to_xmlschema }}</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>{% endfor %}
 </urlset>
