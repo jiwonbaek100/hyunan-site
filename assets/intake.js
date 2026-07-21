@@ -52,7 +52,7 @@
       form.reset();
       count.textContent = '0/1000';
       status.className = 'intake-status success';
-      status.textContent = `접수되었습니다. 확인 후 연락드리겠습니다. 접수번호 ${result.reference || ''}`;
+      status.textContent = `요청서가 현안에 전달되었습니다. 확인 후 연락드리겠습니다. 접수번호 ${result.reference || ''}`;
       submit.textContent = '접수 완료';
     } catch (error) {
       status.className = 'intake-status error';
