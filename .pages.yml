@@ -33,7 +33,7 @@ content:
         label: 업무분야
         type: select
         options:
-          values: [부동산, 형사, 학교폭력, 민사·집행, 가사, 기타]
+          values: [부동산, 상가임대차, 명도, 민사·집행, 형사, 형사·상해, 학교폭력, 가사, 부동산·민사소송, 기타]
       - name: author
         label: 작성자
         type: string
