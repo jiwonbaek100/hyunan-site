@@ -1,4 +1,5 @@
 ---
+layout: case
 title: "부동산 거래 안내가 공인중개사법위반으로 문제 된 사건, 혐의없음 불송치"
 description: "부동산 거래 안내가 부정확했다는 이유로 공인중개사법위반 수사를 받은 공인중개사를 조력해, 민사상 과실 문제와 형사상 고의를 구분하고 혐의없음 불송치 결정을 받은 사례입니다."
 date: 2026-09-14
@@ -7,13 +8,35 @@ practice: 형사·부동산중개
 author: 법률사무소 현안
 image: /images/uploads/case-brokerage-criminal-no-charge-result-full.png
 published: true
+image_type: document
+image_alt: "개인정보를 가린 공인중개사법위반 혐의없음 불송치 수사결과 통지서 전체"
+image_caption: "불송치 수사결과 통지서"
+image_width: 1488
+image_height: 2105
+last_modified_at: 2026-09-28T00:29:01+09:00
+toc:
+  - id: summary
+    title: 한 줄 요약
+  - id: background
+    title: 사건의 시작
+  - id: defense
+    title: 현안의 대응
+  - id: intent
+    title: 과실과 고의의 구분
+  - id: result
+    title: 혐의없음 불송치
+  - id: evidence
+    title: 초기에 정리할 자료
+  - id: meaning
+    title: 이 사례의 의미
+notice: "※ 실제 수행사건의 쟁점과 결과를 바탕으로 작성했으며 개인정보 보호를 위해 세부 사실을 일반화했습니다. 사건 결과는 구체적인 사실관계와 증거에 따라 달라질 수 있습니다."
 ---
 
-## 한 줄 요약
+<h2 id="summary">한 줄 요약</h2>
 
 부동산 거래에서 한 안내가 나중에 틀렸거나 부정확했다고 해서 곧바로 공인중개사법위반 형사책임이 인정되는 것은 아닙니다. 법률사무소 현안은 공인중개사의 확인·설명의무 범위, 거래 결정의 선후관계, 형사상 고의의 증거를 나누어 정리했고, 경찰은 공인중개사법위반 혐의에 대해 **불송치(혐의없음)** 결정을 내렸습니다.
 
-## "그때 그렇게 말하지 않았느냐"에서 시작된 형사사건
+<h2 id="background">&quot;그때 그렇게 말하지 않았느냐&quot;에서 시작된 형사사건</h2>
 
 의뢰인은 한 부동산 거래를 중개한 공인중개사였습니다. 거래 과정에서 당사자가 사후 세무처리에 관해 물었고, 의뢰인은 큰 문제가 없을 것 같다는 취지로 짧게 답했습니다.
 
@@ -21,7 +44,7 @@ published: true
 
 수사의 죄명은 공인중개사법위반이었습니다. 거래상의 중요사항에 관해 거짓된 언행을 해 중개의뢰인의 판단을 그르치게 했다는 취지였습니다. 결국 이 사건의 핵심은 하나였습니다. **부정확한 안내가 있었다는 사정만으로, 공인중개사를 형사처벌할 수 있는가.**
 
-## 안지훈 대표변호사는 먼저 책임의 층위를 나눴습니다
+<h2 id="defense">안지훈 대표변호사는 먼저 책임의 층위를 나눴습니다</h2>
 
 법률사무소 현안의 안지훈 대표변호사는 이 사건을 "안내가 맞았는지 틀렸는지"만의 문제로 보지 않았습니다. 부동산중개 형사사건에서는 민사책임과 형사책임을 구분하지 못하면 방어의 초점이 흐려집니다.
 
@@ -29,11 +52,12 @@ published: true
 
 그 다음 거래의 시간표를 다시 맞췄습니다. 부동산을 내놓은 시점, 거래조건이 조정된 과정, 문제의 질문과 답변이 오간 시점, 실제 계약이 체결된 시점을 문자와 계약자료로 확인했습니다. 그 결과 짧은 답변 하나가 거래 결정을 처음 만들어 냈다고 보기 어려운 흐름이 드러났습니다.
 
-![공인중개사의 확인·설명의무 범위와 형사책임 성립 여부를 검토한 변호인 의견서 일부](/images/uploads/case-brokerage-criminal-no-charge-opinion-excerpt.png)
+<figure class="evidence">
+  <a class="evidence-link" href="/images/uploads/case-brokerage-criminal-no-charge-opinion-excerpt.png" target="_blank" rel="noopener" aria-label="공인중개사의 확인·설명의무 범위와 형사책임 성립 여부를 검토한 변호인 의견서 일부 원본 새 창에서 보기"><img src="/images/uploads/case-brokerage-criminal-no-charge-opinion-excerpt.png" width="1095" height="690" alt="공인중개사의 확인·설명의무 범위와 형사책임 성립 여부를 검토한 변호인 의견서 일부" loading="lazy" decoding="async"></a>
+  <figcaption><span>공인중개사의 확인·설명의무 범위와 형사책임 성립 여부를 검토한 변호인 의견서 일부입니다. 사건 관련 식별정보와 사무실 정보는 제외했습니다.</span><a href="/images/uploads/case-brokerage-criminal-no-charge-opinion-excerpt.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
+</figure>
 
-*공인중개사의 확인·설명의무 범위와 형사책임 성립 여부를 검토한 변호인 의견서 일부입니다. 사건 관련 식별정보와 사무실 정보는 제외했습니다.*
-
-## 과실이 곧 고의는 아닙니다
+<h2 id="intent">과실이 곧 고의는 아닙니다</h2>
 
 공인중개사가 세무문제를 충분히 확인하지 않고 답했다는 지적은 민사적으로 다툴 수 있습니다. 그러나 형사처벌은 다른 문제입니다. 공인중개사법상 문제 되는 금지행위는 사실과 다름을 알면서도 상대방의 판단을 그르치게 하는 행위를 전제로 합니다.
 
@@ -47,23 +71,25 @@ published: true
 
 형사절차에서 모든 책임을 한꺼번에 부정하려고 하면 오히려 설득력이 떨어질 수 있습니다. 이 사건에서는 "부주의가 있었는가"와 "속이려는 고의가 있었는가"를 끝까지 분리하는 것이 중요했습니다.
 
-## 경찰은 혐의없음 불송치 결정을 내렸습니다
+<h2 id="result">경찰은 혐의없음 불송치 결정을 내렸습니다</h2>
 
 경찰은 의뢰인이 관련 요건을 충분히 확인하지 않은 채 단정적으로 안내한 정황과 그 안내가 상대방의 의사결정에 영향을 미친 부분을 보았습니다. 의뢰인에게 유리한 결론만 떼어 소개하면서 이 부분을 감추면 처분의 의미가 달라집니다.
 
 다만 경찰은 형사처벌에 필요한 고의가 명확하게 입증되지 않았고, 책임의 범위는 민사적으로 다툴 사안이라고 판단했습니다. 이에 공인중개사법위반 혐의에 관해 **불송치(혐의없음)** 결정을 내렸습니다.
 
-![부동산 거래 관련 안내로 수사받은 공인중개사에게 내려진 혐의없음 불송치 결정](/images/uploads/case-brokerage-criminal-no-charge-result-full.png)
-
-*부동산 거래 관련 안내로 수사받은 공인중개사에게 내려진 혐의없음 불송치 결정입니다. 공개용으로 마스킹된 수사결과 통지서 이미지를 사용했습니다.*
+<figure class="evidence evidence--document">
+  <a class="evidence-link" href="/images/uploads/case-brokerage-criminal-no-charge-result-full.png" target="_blank" rel="noopener" aria-label="부동산 거래 관련 안내로 수사받은 공인중개사에게 내려진 혐의없음 불송치 결정 원본 새 창에서 보기"><img src="/images/uploads/case-brokerage-criminal-no-charge-result-full.png" width="1488" height="2105" alt="부동산 거래 관련 안내로 수사받은 공인중개사에게 내려진 혐의없음 불송치 결정" loading="lazy" decoding="async"></a>
+  <figcaption><span>부동산 거래 관련 안내로 수사받은 공인중개사에게 내려진 혐의없음 불송치 결정입니다. 공개용으로 마스킹된 수사결과 통지서 이미지를 사용했습니다.</span><a href="/images/uploads/case-brokerage-criminal-no-charge-result-full.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
+</figure>
 
 결과를 전달받은 뒤 의뢰인은 "혐의없음이라 함은 상대방 측에서도 고소할 수는 없고 경찰 쪽에서는 완결인 거예요"라고 다시 확인했습니다. 안지훈 대표변호사는 "고소할 수는 있는데 어려울 것"이고, 같은 건으로 앞서 혐의없음 처분이 나왔다는 점을 설명했습니다.
 
-![불송치 결과를 전달받은 뒤 의뢰인이 전한 답변](/images/uploads/case-brokerage-criminal-no-charge-client-message.png)
+<figure class="evidence evidence--message">
+  <a class="evidence-link" href="/images/uploads/case-brokerage-criminal-no-charge-client-message.png" target="_blank" rel="noopener" aria-label="불송치 결과를 전달받은 뒤 의뢰인이 전한 답변 원본 새 창에서 보기"><img src="/images/uploads/case-brokerage-criminal-no-charge-client-message.png" width="353" height="515" alt="불송치 결과를 전달받은 뒤 의뢰인이 전한 답변" loading="lazy" decoding="async"></a>
+  <figcaption><span>불송치 결과를 전달받은 뒤 의뢰인이 전한 답변입니다. 프로필과 이름 등 식별정보는 비식별 처리했습니다.</span><a href="/images/uploads/case-brokerage-criminal-no-charge-client-message.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
+</figure>
 
-*불송치 결과를 전달받은 뒤 의뢰인이 전한 답변입니다. 프로필과 이름 등 식별정보는 비식별 처리했습니다.*
-
-## 공인중개사법위반 수사에서 무엇을 봐야 할까요
+<h2 id="evidence">공인중개사법위반 수사에서 무엇을 봐야 할까요</h2>
 
 공인중개사법위반 혐의로 조사를 받는다면, 먼저 "설명이 부정확했는지"와 "형사처벌 대상인지"를 구분해야 합니다. 특히 부동산 거래 안내, 세무 관련 설명, 상생임대인 제도, 양도소득세 문제처럼 민사·세무·중개 실무가 겹치는 사건에서는 쟁점이 쉽게 섞입니다.
 
@@ -76,12 +102,10 @@ published: true
 5. 중개사가 별도 이익을 얻었는지에 관한 자료
 6. 민사상 손해 주장과 형사상 고의를 구분할 수 있는 사정
 
-## 이 사례의 의미
+<h2 id="meaning">이 사례의 의미</h2>
 
 이번 결정은 의뢰인의 형사혐의에 관한 판단입니다. 민사상 손해배상책임까지 없다고 확정한 결과는 아닙니다. 그러므로 "모든 책임을 벗었다"고 넓혀 말해서는 안 됩니다.
 
 다만 부동산중개 과정에서 안내가 부정확했다는 주장만으로 곧바로 공인중개사법위반 형사책임이 인정되는 것은 아닙니다. 법률사무소 현안은 부동산 거래 구조와 형사절차를 함께 보면서, 민사상 과실과 형사상 고의를 구분해 대응했습니다.
 
 성남·분당에서 부동산중개 관련 형사사건, 공인중개사법위반 수사, 부동산 거래 설명의무 문제가 생겼다면 초기 자료 정리와 첫 진술 방향이 중요합니다. 안지훈 대표변호사는 공인중개사 자격과 부동산 분쟁 수행 경험을 바탕으로 거래 과정, 계약자료, 수사 쟁점을 함께 검토합니다.
-
-※ 실제 수행사건의 쟁점과 결과를 바탕으로 작성했으며 개인정보 보호를 위해 세부 사실을 일반화했습니다. 사건 결과는 구체적인 사실관계와 증거에 따라 달라질 수 있습니다.
