@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <title>{{ page.title | escape }} | 법률사무소 현안</title>
+  <meta name="description" content="{{ page.description | strip_html | escape }}">
+  <meta name="author" content="{{ page.author | escape }}">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <link rel="canonical" href="{{ page.url | absolute_url }}">
+  <meta property="og:locale" content="ko_KR">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="법률사무소 현안">
+  <meta property="og:title" content="{{ page.title | escape }}">
+  <meta property="og:description" content="{{ page.description | escape }}">
+  <meta property="og:url" content="{{ page.url | absolute_url }}">
+  <meta property="og:image" content="{{ page.image | absolute_url }}">
+  <meta property="og:image:alt" content="{{ page.image_alt | default: page.title | escape }}">
+  <meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+  <meta property="article:modified_time" content="{{ page.last_modified_at | default: page.date | date_to_xmlschema }}">
+  <meta property="article:section" content="{{ page.practice | escape }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ page.title | escape }}">
+  <meta name="twitter:description" content="{{ page.description | escape }}">
+  <meta name="twitter:image" content="{{ page.image | absolute_url }}">
+  <meta name="twitter:image:alt" content="{{ page.image_alt | default: page.title | escape }}">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "{{ page.url | absolute_url }}#article",
+        "headline": {{ page.title | jsonify }},
+        "description": {{ page.description | jsonify }},
+        "datePublished": "{{ page.date | date_to_xmlschema }}",
+        "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+        "author": {"@type": "Organization", "name": {{ page.author | jsonify }}, "url": "{{ '/' | absolute_url }}"},
+        "publisher": {"@id": "{{ '/' | absolute_url }}#office"},
+        "image": ["{{ page.image | absolute_url }}"],
+        "mainEntityOfPage": {"@id": "{{ page.url | absolute_url }}#webpage"},
+        "articleSection": {{ page.category | jsonify }},
+        "inLanguage": "ko-KR"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "{{ page.url | absolute_url }}#webpage",
+        "url": "{{ page.url | absolute_url }}",
+        "name": {{ page.title | jsonify }},
+        "isPartOf": {"@id": "{{ '/' | absolute_url }}#website"},
+        "breadcrumb": {"@id": "{{ page.url | absolute_url }}#breadcrumb"},
+        "inLanguage": "ko-KR"
+      },
+      {
+        "@type": "LegalService",
+        "@id": "{{ '/' | absolute_url }}#office",
+        "name": "법률사무소 현안",
+        "url": "{{ '/' | absolute_url }}",
+        "logo": {"@type": "ImageObject", "url": "{{ '/images/hyeonan-logo.png' | absolute_url }}"},
+        "telephone": "+82-31-706-6544",
+        "address": {"@type": "PostalAddress", "streetAddress": "서현로 216, 2층 201호", "addressLocality": "성남시 분당구", "addressRegion": "경기도", "addressCountry": "KR"}
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "{{ page.url | absolute_url }}#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "홈", "item": "{{ '/' | absolute_url }}"},
+          {"@type": "ListItem", "position": 2, "name": "인사이트·성공사례", "item": "{{ '/insights/' | absolute_url }}"},
+          {"@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/case.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/intake.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#article-content">본문 바로가기</a>
+  <header class="header"><div class="wrap nav"><a class="logo" href="/"><img src="/images/hyeonan-logo.png" alt="" width="25" height="27">법률사무소 현안</a><a class="back" href="/insights/">전체 글 보기 →</a></div></header>
+  <main id="main">
+    <article aria-labelledby="article-title">
+      <header class="hero">
+        <div class="wrap">
+          <nav class="breadcrumbs" aria-label="현재 위치"><ol><li><a href="/">홈</a></li><li><a href="/insights/">인사이트·성공사례</a></li><li aria-current="page">{{ page.category }}</li></ol></nav>
+          <div class="hero-grid">
+            <div>
+              <p class="eyebrow"><span class="category">{{ page.category }}</span><span>{{ page.practice }}</span></p>
+              <h1 id="article-title">{{ page.title }}</h1>
+              <p class="lede">{{ page.description }}</p>
+              <div class="byline"><a href="/">{{ page.author }}</a><span>게시 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: '%Y.%m.%d' }}</time></span>{% if page.last_modified_at %}<span>수정 <time datetime="{{ page.last_modified_at | date_to_xmlschema }}">{{ page.last_modified_at | date: '%Y.%m.%d' }}</time></span>{% endif %}</div>
+            </div>
+            <figure class="cover{% if page.image_type == 'document' %} cover--document{% endif %}">
+              <a href="{{ page.image | relative_url }}" target="_blank" rel="noopener" aria-label="{{ page.image_alt | default: page.title | escape }} — 원본 크기로 보기 (새 창)"><img src="{{ page.image | relative_url }}" alt="{{ page.image_alt | default: page.title | escape }}"{% if page.image_width %} width="{{ page.image_width }}" height="{{ page.image_height }}"{% endif %} loading="eager" fetchpriority="high"></a>
+              {% if page.image_caption %}<figcaption>{{ page.image_caption }} · <a href="{{ page.image | relative_url }}" target="_blank" rel="noopener">크게 보기 ↗</a></figcaption>{% endif %}
+            </figure>
+          </div>
+        </div>
+      </header>
+      <div class="wrap reading-layout{% if page.toc %} has-toc{% endif %}">
+        {% if page.toc %}
+        <nav class="article-toc" aria-labelledby="toc-title"><h2 id="toc-title">이 글의 순서</h2><ol>{% for item in page.toc %}<li><a href="#{{ item.id }}">{{ item.title }}</a></li>{% endfor %}</ol></nav>
+        {% endif %}
+        <div class="article-body" id="article-content">
+          {{ content }}
+          <aside class="notice" aria-label="사례 안내"><p>{{ page.notice | default: '※ 구체적인 결과는 개별 사건의 사실관계와 증거에 따라 달라질 수 있습니다. 이 글은 일반적인 법률정보이며 개별 사건에 대한 법률자문이 아닙니다.' }}</p></aside>
+          <section class="cta" aria-label="사건 상담"><div><h2>내 사건도 검토가 필요하다면</h2><p>법률사무소 현안 · 성남·분당</p></div><button type="button" data-intake-open>사건 문의하기 →</button></section>
+          <nav class="article-end" aria-label="글 이동"><a href="/insights/">← 인사이트·성공사례</a><a href="#article-title">맨 위로 ↑</a></nav>
+        </div>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="wrap footer-inner"><span>법률사무소 현안 · 경기도 성남시 분당구 서현로 216, 2층 201호</span><a href="tel:031-706-6544">031-706-6544</a></div></footer>
+  {% include intake-modal.html %}
+  <script src="/assets/intake.js" defer></script>
+</body>
+</html>
