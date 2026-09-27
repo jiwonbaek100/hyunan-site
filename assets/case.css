@@ -26,7 +26,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #447eab;outline-offset:5p
 .byline{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:26px;font-size:12px;color:var(--muted)}
 .byline a{font-weight:600;color:var(--ink)}
 .cover{margin:0;min-width:0}
-.cover a{display:block}
+.cover>a{display:block}
 .cover img{width:100%;height:270px;object-fit:cover;border:1px solid var(--line);border-radius:4px}
 .cover--document img{width:100%;height:auto;object-fit:contain;background:#fff;box-shadow:0 8px 24px #12283d0c}
 .cover figcaption{font-size:11px;text-align:center;color:var(--muted);margin-top:12px}
@@ -40,7 +40,7 @@ a:focus-visible,button:focus-visible{outline:3px solid #447eab;outline-offset:5p
 .article-toc a::before{content:counter(section,decimal-leading-zero);font-size:11px;color:#64798a;padding-top:2px;font-variant-numeric:tabular-nums}
 .article-toc a:hover{color:var(--navy);text-decoration:underline;text-underline-offset:4px}
 .article-body{min-width:0;font-size:18px;line-height:1.95;letter-spacing:-.015em}
-.article-body h2{font-size:28px;font-weight:700;line-height:1.55;letter-spacing:-.04em;margin:66px 0 26px;padding-top:28px;border-top:1px solid var(--line);scroll-margin-top:100px;text-wrap:pretty}
+.article-body h2{font-size:28px;font-weight:700;line-height:1.55;letter-spacing:-.04em;margin:66px 0 26px;padding-top:28px;border-top:1px solid var(--line);scroll-margin-top:0;text-wrap:pretty}
 .article-body>h2:first-child{margin-top:0;padding-top:0;border-top:0}
 .article-body h3{font-size:22px;line-height:1.6;margin:38px 0 18px}
 .article-body p,.article-body ul,.article-body ol{margin:0 0 26px}
