@@ -1,0 +1,172 @@
+/* Reading treatment for the investment-fraud case study. */
+.reading-page {
+  --sub: #586470;
+  --line: #dce2e7;
+  color: #28333d;
+  overflow-wrap: anywhere;
+  -webkit-font-smoothing: antialiased;
+}
+.reading-page .header { height: 72px; }
+.reading-page .header .wrap { max-width: 1040px; }
+.reading-page .back { font-size: .875rem; }
+.reading-page .hero {
+  padding: 56px 0 48px;
+  background: #f3f6f8;
+  border-bottom: 1px solid var(--line);
+}
+.reading-page .hero-inner {
+  max-width: 940px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 164px;
+  align-items: center;
+  gap: 52px;
+}
+.reading-page .meta {
+  margin-bottom: 16px;
+  font-size: .875rem;
+  font-weight: 500;
+  color: #4f6375;
+}
+.reading-page .hero h1 {
+  font-size: clamp(1.875rem, 3.2vw, 2.5rem);
+  line-height: 1.5;
+  letter-spacing: -.035em;
+  margin-bottom: 20px;
+  text-wrap: balance;
+}
+.reading-page .lede {
+  font-size: 1rem;
+  line-height: 1.9;
+  max-width: 640px;
+}
+.reading-page .cover {
+  height: auto;
+  margin: 0;
+  padding: 7px;
+  border: 1px solid #d5dfe7;
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0 6px 18px #12283d0d;
+}
+.reading-page .cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: none;
+}
+.reading-page .article {
+  padding: 48px 0 88px;
+  font-size: 1.125rem;
+  line-height: 1.95;
+  letter-spacing: -.015em;
+}
+.reading-page .article > .wrap { max-width: 720px; }
+.reading-page .article p { margin: 0 0 1.5em; }
+.reading-page .article > .wrap > p:first-child {
+  font-size: 1.25rem;
+  line-height: 1.75;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 1.1em;
+}
+.reading-page .article strong { font-weight: 700; color: #142f47; }
+.reading-page .article h2 {
+  margin: 56px 0 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.65;
+  letter-spacing: -.025em;
+  color: var(--navy);
+  scroll-margin-top: 96px;
+}
+.reading-page .article blockquote {
+  margin: 32px 0;
+  padding: 18px 22px;
+  border-left: 3px solid #58758e;
+  border-radius: 0 6px 6px 0;
+  background: #f4f7fa;
+  color: #3f5364;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+.reading-page .article blockquote p { margin: 0; }
+.reading-page .article blockquote em { font-style: normal; }
+.reading-page .case-figure {
+  margin: 32px 0 36px;
+  padding: 16px;
+  background: #f8fafb;
+  border: 1px solid #e0e6eb;
+  border-radius: 8px;
+}
+.reading-page .case-image-link { display: block; background: white; }
+.reading-page .case-figure img,
+.reading-page .article p > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  border-radius: 0;
+  margin: 0;
+  filter: none;
+}
+.reading-page .case-figure--document { max-width: 500px; margin-inline: auto; }
+.reading-page .case-figure--message { max-width: 430px; margin-inline: auto; }
+.reading-page .case-figure figcaption {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 16px;
+  margin-top: 12px;
+  color: #586470;
+  font-size: .875rem;
+  line-height: 1.7;
+  letter-spacing: 0;
+}
+.reading-page .case-figure figcaption a {
+  color: #3b5972;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  white-space: nowrap;
+}
+.reading-page .article p.case-disclaimer {
+  margin: 40px 0 0;
+  padding-top: 22px;
+  border-top: 1px solid var(--line);
+  color: #63707b;
+  font-size: .875rem;
+  line-height: 1.9;
+}
+.reading-page .cta { border-radius: 8px; padding: 26px; }
+.reading-page .cta span { font-size: 1.125rem; line-height: 1.6; }
+.reading-page .cta button { font-size: .9375rem; flex-shrink: 0; }
+.reading-page a:focus-visible,
+.reading-page button:focus-visible { outline: 3px solid #7597b4; outline-offset: 4px; }
+@media (max-width: 680px) {
+  .reading-page .wrap { width: calc(100% - 40px); }
+  .reading-page .header { height: 64px; }
+  .reading-page .logo { gap: 7px; font-size: 1rem; }
+  .reading-page .logo img { width: 22px; height: 24px; }
+  .reading-page .back { font-size: .8125rem; }
+  .reading-page .hero { padding: 34px 0 32px; }
+  .reading-page .hero-inner { grid-template-columns: minmax(0, 1fr); gap: 0; }
+  .reading-page .cover { display: none; }
+  .reading-page .meta { margin-bottom: 12px; }
+  .reading-page .hero h1 { font-size: 1.875rem; line-height: 1.5; margin-bottom: 16px; }
+  .reading-page .lede { font-size: .9375rem; }
+  .reading-page .article { padding: 32px 0 64px; font-size: 1.0625rem; line-height: 1.95; }
+  .reading-page .article > .wrap > p:first-child { font-size: 1.125rem; }
+  .reading-page .article h2 { margin-top: 42px; padding-top: 22px; font-size: 1.3125rem; }
+  .reading-page .article blockquote { padding: 16px 18px; }
+  .reading-page .case-figure { padding: 10px; margin-block: 28px 32px; border-radius: 6px; }
+  .reading-page .case-figure figcaption { margin-top: 10px; }
+  .reading-page .cta { display: block; padding: 22px; }
+  .reading-page .cta button { margin-top: 18px; width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
