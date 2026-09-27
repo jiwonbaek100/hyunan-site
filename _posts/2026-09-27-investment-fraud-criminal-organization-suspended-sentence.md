@@ -32,7 +32,7 @@ hide_default_notice: true
 > *변호인의견서는 바로 의뢰인의 이런 점들을 자세히 살펴 꼼꼼히 작성되었습니다.*
 
 <figure class="case-figure">
-  <a class="case-image-link" href="/images/uploads/case-investment-fraud-opinion-role.png" target="_blank" rel="noopener" aria-label="다른 팀의 범행에 대한 인식 범위를 살핀 변호인의견서 일부 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-opinion-role.png" alt="다른 팀의 범행에 대한 인식 범위를 살핀 변호인의견서 일부" loading="lazy" decoding="async"></a>
+  <a class="case-image-link" href="/images/uploads/case-investment-fraud-opinion-role.png" target="_blank" rel="noopener" aria-label="다른 팀의 범행에 대한 인식 범위를 살핀 변호인의견서 일부 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-opinion-role.png" width="637" height="162" alt="다른 팀의 범행에 대한 인식 범위를 살핀 변호인의견서 일부" loading="lazy" decoding="async"></a>
   <figcaption><span>법률사무소 현안 투자사기 변호인의견서</span><a href="/images/uploads/case-investment-fraud-opinion-role.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
 </figure>
 
@@ -44,7 +44,7 @@ hide_default_notice: true
 ## 수사 협조와 피해회복을 객관적인 자료로 남겼습니다
 
 <figure class="case-figure">
-  <a class="case-image-link" href="/images/uploads/case-investment-fraud-opinion-surrender.png" target="_blank" rel="noopener" aria-label="자수와 수사 협조에 관한 변호인의견서 일부 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-opinion-surrender.png" alt="자수와 수사 협조에 관한 변호인의견서 일부" loading="lazy" decoding="async"></a>
+  <a class="case-image-link" href="/images/uploads/case-investment-fraud-opinion-surrender.png" target="_blank" rel="noopener" aria-label="자수와 수사 협조에 관한 변호인의견서 일부 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-opinion-surrender.png" width="637" height="237" alt="자수와 수사 협조에 관한 변호인의견서 일부" loading="lazy" decoding="async"></a>
   <figcaption><span>변호인의견서 · 자수와 수사 협조</span><a href="/images/uploads/case-investment-fraud-opinion-surrender.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
 </figure>
 
@@ -53,7 +53,7 @@ hide_default_notice: true
 현안은 자수 또는 수사 협조가 이루어진 시점과 내용을 기록으로 확인해 의견서에 담았습니다. 담당 수사관이 협조 사실을 확인한 자료가 있는 부분은 그 자료도 함께 제출했습니다.
 
 <figure class="case-figure">
-  <a class="case-image-link" href="/images/uploads/case-investment-fraud-opinion-recovery.png" target="_blank" rel="noopener" aria-label="피해 회복 경위를 정리한 변호인의견서 일부 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-opinion-recovery.png" alt="피해 회복 경위를 정리한 변호인의견서 일부" loading="lazy" decoding="async"></a>
+  <a class="case-image-link" href="/images/uploads/case-investment-fraud-opinion-recovery.png" target="_blank" rel="noopener" aria-label="피해 회복 경위를 정리한 변호인의견서 일부 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-opinion-recovery.png" width="632" height="130" alt="피해 회복 경위를 정리한 변호인의견서 일부" loading="lazy" decoding="async"></a>
   <figcaption><span>변호인의견서 · 피해 회복</span><a href="/images/uploads/case-investment-fraud-opinion-recovery.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
 </figure>
 
@@ -70,12 +70,12 @@ hide_default_notice: true
 ## 그 결과 법원은 두 의뢰인 모두에게 집행유예를 선고했습니다
 
 <figure class="case-figure case-figure--document">
-  <a class="case-image-link" href="/images/uploads/case-investment-fraud-judgment-first-page.png" target="_blank" rel="noopener" aria-label="인적 사항 등을 가린 판결문 첫 페이지 전체 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-judgment-first-page.png" alt="인적 사항 등을 가린 판결문 첫 페이지 전체" loading="lazy" decoding="async"></a>
+  <a class="case-image-link" href="/images/uploads/case-investment-fraud-judgment-first-page.png" target="_blank" rel="noopener" aria-label="인적 사항 등을 가린 판결문 첫 페이지 전체 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-judgment-first-page.png" width="1131" height="1600" alt="인적 사항 등을 가린 판결문 첫 페이지 전체" loading="lazy" decoding="async"></a>
   <figcaption><span>판결문 첫 페이지 전체</span><a href="/images/uploads/case-investment-fraud-judgment-first-page.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
 </figure>
 
 <figure class="case-figure">
-  <a class="case-image-link" href="/images/uploads/case-investment-fraud-judgment-order.png" target="_blank" rel="noopener" aria-label="두 의뢰인의 집행유예가 기재된 판결 주문 일부 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-judgment-order.png" alt="두 의뢰인의 집행유예가 기재된 판결 주문 일부" loading="lazy" decoding="async"></a>
+  <a class="case-image-link" href="/images/uploads/case-investment-fraud-judgment-order.png" target="_blank" rel="noopener" aria-label="두 의뢰인의 집행유예가 기재된 판결 주문 일부 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-judgment-order.png" width="643" height="209" alt="두 의뢰인의 집행유예가 기재된 판결 주문 일부" loading="lazy" decoding="async"></a>
   <figcaption><span>판결문 · 집행유예 주문</span><a href="/images/uploads/case-investment-fraud-judgment-order.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
 </figure>
 
@@ -88,7 +88,7 @@ hide_default_notice: true
 덧붙이자면, 집행유예 역시 유죄판결이므로 유예기간 중 다시 범죄를 저지르거나 판결에서 정한 의무를 이행하지 않으면 불이익이 생길 수 있으므로 조심하셔야 합니다.
 
 <figure class="case-figure case-figure--message">
-  <a class="case-image-link" href="/images/uploads/case-investment-fraud-client-message.png" target="_blank" rel="noopener" aria-label="선고 후 판결 내용과 사회봉사명령을 안내한 대화 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-client-message.png" alt="선고 후 판결 내용과 사회봉사명령을 안내한 대화" loading="lazy" decoding="async"></a>
+  <a class="case-image-link" href="/images/uploads/case-investment-fraud-client-message.png" target="_blank" rel="noopener" aria-label="선고 후 판결 내용과 사회봉사명령을 안내한 대화 원본 새 창에서 보기"><img src="/images/uploads/case-investment-fraud-client-message.png" width="1064" height="1337" alt="선고 후 판결 내용과 사회봉사명령을 안내한 대화" loading="lazy" decoding="async"></a>
   <figcaption><span>선고 후 안내와 의뢰인의 답변</span><a href="/images/uploads/case-investment-fraud-client-message.png" target="_blank" rel="noopener">원본 보기 ↗</a></figcaption>
 </figure>
 
