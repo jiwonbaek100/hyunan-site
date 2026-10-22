@@ -4,7 +4,7 @@ media:
 
 content:
   - name: insights
-    label: 인사이트·성공사례
+    label: 성공사례
     type: collection
     path: _posts
     view:
@@ -28,7 +28,8 @@ content:
         label: 글 유형
         type: select
         options:
-          values: [성공사례, 법률정보, 현안소식]
+          values: [성공사례]
+        default: 성공사례
       - name: practice
         label: 업무분야
         type: select

@@ -70,7 +70,7 @@
         "@id": "{{ page.url | absolute_url }}#breadcrumb",
         "itemListElement": [
           {"@type": "ListItem", "position": 1, "name": "홈", "item": "{{ '/' | absolute_url }}"},
-          {"@type": "ListItem", "position": 2, "name": "인사이트·성공사례", "item": "{{ '/insights/' | absolute_url }}"},
+          {"@type": "ListItem", "position": 2, "name": "성공사례", "item": "{{ '/insights/' | absolute_url }}"},
           {"@type": "ListItem", "position": 3, "name": {{ page.title | jsonify }}, "item": "{{ page.url | absolute_url }}"}
         ]
       }
@@ -85,12 +85,12 @@
 </head>
 <body>
   <a class="skip-link" href="#article-content">본문 바로가기</a>
-  <header class="header"><div class="wrap nav"><a class="logo" href="/"><img src="/images/hyeonan-logo.png" alt="" width="25" height="27">법률사무소 현안</a><a class="back" href="/insights/">전체 글 보기 →</a></div></header>
+  <header class="header"><div class="wrap nav"><a class="logo" href="/"><img src="/images/hyeonan-logo.png" alt="" width="25" height="27">법률사무소 현안</a><a class="back" href="/insights/">성공사례 전체보기 →</a></div></header>
   <main id="main">
     <article aria-labelledby="article-title">
       <header class="hero">
         <div class="wrap">
-          <nav class="breadcrumbs" aria-label="현재 위치"><ol><li><a href="/">홈</a></li><li><a href="/insights/">인사이트·성공사례</a></li><li aria-current="page">{{ page.category }}</li></ol></nav>
+          <nav class="breadcrumbs" aria-label="현재 위치"><ol><li><a href="/">홈</a></li><li><a href="/insights/">성공사례</a></li><li aria-current="page">{{ page.category }}</li></ol></nav>
           <div class="hero-grid">
             <div>
               <p class="eyebrow"><span class="category">{{ page.category }}</span><span>{{ page.practice }}</span></p>
@@ -113,7 +113,7 @@
           {{ content }}
           <aside class="notice" aria-label="사례 안내"><p>{{ page.notice | default: '※ 구체적인 결과는 개별 사건의 사실관계와 증거에 따라 달라질 수 있습니다. 이 글은 일반적인 법률정보이며 개별 사건에 대한 법률자문이 아닙니다.' }}</p></aside>
           <section class="cta" aria-label="사건 상담"><div><h2>내 사건도 검토가 필요하다면</h2><p>법률사무소 현안 · 성남·분당</p></div><button type="button" data-intake-open>사건 문의하기 →</button></section>
-          <nav class="article-end" aria-label="글 이동"><a href="/insights/">← 인사이트·성공사례</a><a href="#article-title">맨 위로 ↑</a></nav>
+          <nav class="article-end" aria-label="글 이동"><a href="/insights/">← 성공사례</a><a href="#article-title">맨 위로 ↑</a></nav>
         </div>
       </div>
     </article>

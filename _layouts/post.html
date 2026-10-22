@@ -25,7 +25,7 @@
   {% if page.reading_layout == 'case' %}<link rel="stylesheet" href="/assets/article-reading.css">{% endif %}
 </head>
 <body{% if page.reading_layout == 'case' %} class="reading-page"{% endif %}>
-  <header class="header"><div class="wrap nav"><a class="logo" href="/"><img src="/images/hyeonan-logo.png" alt="현안 로고">법률사무소 현안</a><a class="back" href="/insights/">인사이트 전체보기 →</a></div></header>
+  <header class="header"><div class="wrap nav"><a class="logo" href="/"><img src="/images/hyeonan-logo.png" alt="현안 로고">법률사무소 현안</a><a class="back" href="/insights/">성공사례 전체보기 →</a></div></header>
   <main><section class="hero"><div class="wrap hero-inner"><div class="hero-copy"><p class="meta">{{ page.category }} · {{ page.practice }} · {{ page.date | date: '%Y.%m.%d' }}</p><h1>{{ page.title }}</h1><p class="lede">{{ page.description }}</p></div><div class="cover"><img src="{{ page.image }}" alt="{{ page.title | escape }}" loading="eager"></div></div></section><article class="article"><div class="wrap">{{ content }}{% unless page.hide_default_notice %}<p class="notice">※ 구체적인 결과는 개별 사건의 사실관계와 증거에 따라 달라질 수 있습니다. 이 글은 일반적인 법률정보이며 개별 사건에 대한 법률자문이 아닙니다.</p>{% endunless %}<div class="cta"><span>내 사건도 검토가 필요하다면</span><button type="button" data-intake-open>사건 문의하기</button></div></div></article></main>
   {% include intake-modal.html %}
   <script src="/assets/intake.js" defer></script>
