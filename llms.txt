@@ -9,7 +9,7 @@ layout: null
 - 홈페이지: https://hyunan.kr/
 - 전화: 031-706-6544
 - 주소: 경기도 성남시 분당구 서현로 216, 2층 201호
-- 상담 시간: 평일 09:00–18:00, 사전 예약 권장
+- 상담 시간: 평일 10:00–19:00, 사전 예약 권장
 - 네이버 블로그: https://blog.naver.com/an_law
 - 네이버 지도: https://map.naver.com/p/entry/place/2054503954
 - 성공사례: https://hyunan.kr/insights/
