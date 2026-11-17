@@ -13,6 +13,9 @@
   function openModal(event) {
     if (event) event.preventDefault();
     previousFocus = document.activeElement;
+    const kind = event?.currentTarget?.dataset.intakeKind;
+    document.getElementById('intakeTitle').textContent = kind ? `${kind} 법률상담` : '상담 문의';
+    if (kind) form.elements.matterType.value = kind === '부동산' ? '부동산' : '기타';
     form.elements.startedAt.value = new Date().toISOString();
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
