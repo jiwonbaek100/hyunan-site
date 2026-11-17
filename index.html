@@ -99,7 +99,7 @@
   <nav class="consult-dock" aria-label="빠른 법률상담"><button type="button" data-intake-open data-intake-kind="부동산">부동산 법률상담 <span>↗</span></button><button type="button" data-intake-open data-intake-kind="종합">종합 법률상담 <span>↗</span></button></nav>
   {% include intake-modal.html %}
   <script>const header=document.getElementById('header'),sheet=document.getElementById('sheet');function setHeader(){header.classList.toggle('on',scrollY>30)}function openMenu(){sheet.classList.add('open');document.body.style.overflow='hidden'}function closeMenu(){sheet.classList.remove('open');document.body.style.overflow=''}addEventListener('scroll',setHeader,{passive:true});setHeader();requestAnimationFrame(()=>document.body.classList.add('loaded'));const revealTargets=document.querySelectorAll('.intro-grid>*,.problems-head>*,.problem,.method-top>*,.feature,.people-head,.person,.cases-head>*,.case-card,.space-grid>*,.contact-grid>*');revealTargets.forEach((item,index)=>{item.classList.add('reveal');item.style.setProperty('--delay',`${index%4*.06}s`)});if('IntersectionObserver'in window){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12,rootMargin:'0px 0px -5%'});revealTargets.forEach(item=>observer.observe(item))}else{revealTargets.forEach(item=>item.classList.add('visible'))}</script>
-  <script src="/assets/intake.js" defer></script>
+  <script src="/assets/intake.js?v=20261117-property" defer></script>
 <script src="/assets/home-property.js" defer></script>
 </body>
 </html>
