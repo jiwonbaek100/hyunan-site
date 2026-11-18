@@ -64,6 +64,11 @@
 .estate-consult .consult-message{max-width:min(94vw,680px)}
 .hc-band,.hr-band{padding:clamp(96px,10vw,164px) 0}.hc-row,.hr-row{margin-top:50px}.hc-card{flex-basis:min(84vw,390px)}.hc-page{display:flex;flex-direction:column;justify-content:center;min-height:280px;background:#fff;padding:20px 8px 48px}.hc-page strong{font-size:17px;top:auto;left:auto;bottom:9px;right:12px;padding:2px 9px;border-width:2px;transform:rotate(-5deg)}.hc-page a{display:block}.hr-card{display:grid;place-items:center;min-height:0;height:clamp(340px,40vw,480px);padding:0;background:#e8edf0;overflow:hidden}.hr-card img{width:100%;height:100%;object-fit:contain;min-height:0}
 @media(max-width:800px){#property .estate-copy{width:100%}#property .estate-scene{background:linear-gradient(#f7f8fa00 5%,#f7f8fa 35%),url('/images/bundang-dusk.webp') right top/auto 260px no-repeat,#f7f8fa;padding:235px 20px 84px}#property .estate-scene:before{display:none}.estate-consult{min-height:0;padding:88px 15px clamp(240px,65vw,380px);background:linear-gradient(#f7f8fa 45%,transparent 62%),url('/images/story/consult.webp') right bottom/100% auto no-repeat,#f7f8fa}.hr-card{height:360px}.hc-row,.hr-row{margin-top:32px}}
+
+/* Fade from the photo's own top edge at every viewport size. */
+.estate-consult{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(180deg,#edf2f6,#f7f8f9 36%)}
+.estate-consult::before{content:"";position:absolute;z-index:-1;pointer-events:none;right:0;bottom:0;height:78%;width:auto;aspect-ratio:1600/1030;background:url('/images/story/consult.webp') center/100% 100% no-repeat;mask-image:linear-gradient(to bottom,transparent 0%,#000 25%),linear-gradient(to right,transparent 0%,#000 48%);mask-composite:intersect}
+@media(max-width:800px){.estate-consult{background:#f7f8fa}.estate-consult::before{width:100%;height:auto;mask-image:linear-gradient(to bottom,transparent 0%,#000 28%);mask-composite:add}}
 </style></head>
 <body>
   <header class="header" id="header"><div class="wrap nav"><a href="#top" class="logo"><img src="images/hyeonan-logo.png" alt="현안 로고">법률사무소 현안</a><nav class="navlinks"><a href="/services/">업무분야</a><a href="/lawyers/">변호사 소개</a><a href="/insights/">성공사례</a><a href="/contact/" class="outline">상담 문의</a></nav><button class="menubtn" onclick="openMenu()">메뉴&nbsp; ☰</button></div></header>
