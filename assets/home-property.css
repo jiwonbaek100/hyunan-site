@@ -33,3 +33,23 @@ body{font-family:Pretendard,'Noto Sans KR',sans-serif}.header{background:rgba(25
 .estate-consult{padding:clamp(36px,5vw,76px) 0 clamp(64px,7vw,104px);background:linear-gradient(#edf2f6,#f7f8f8 85%);word-break:keep-all}
 .estate-consult .property-lawyer{margin-top:0}
 @media(max-width:800px){.estate-scene{background:linear-gradient(#fafafa 55%,#edf2f6)}.estate-scene::after{display:none}.estate-consult{padding-top:12px}.estate-consult .property-lawyer>div{grid-row:1}}
+
+/* Shared typography for the homepage property story. */
+main{--story-ink:#203343;--story-body:#394d5c;--story-accent:#254e70}
+.home-hero h1{font-size:42px}
+.estate-copy{font-size:clamp(19px,1.44vw,27px);line-height:1.78;color:var(--story-body);text-align:left}
+.estate-copy h2,.consult-title,.property-life-copy .title{color:var(--story-ink);font-size:27px;line-height:1.58;font-weight:600;letter-spacing:-.035em}
+.estate-copy p{margin-top:1.38em}
+.estate-copy .estate-price{font-size:27px;color:var(--story-accent)}
+.estate-examples span{display:block}
+.estate-examples span+span{margin-top:.28em}
+.estate-copy .estate-caption{margin-top:0}
+.estate-consult .property-lawyer{display:flex;flex-direction:column;align-items:center;gap:36px;text-align:center}
+.consult-message{max-width:640px}
+.consult-message .consult-title{margin-bottom:28px}
+.consult-message p,.property-life-copy>p:not(.life-examples){font-size:16px;line-height:1.98;color:var(--story-body);margin:0 0 24px}
+.estate-consult .property-lawyer img{width:min(100%,860px);aspect-ratio:2.1;object-position:50% 53%}
+.property-life-copy .life-examples{color:var(--story-body);font-size:27px;line-height:1.75}
+@media(max-width:800px){.estate-copy{font-size:18px;line-height:1.84}.estate-copy h2,.consult-title,.property-life-copy .title{font-size:clamp(22px,5.7vw,27px)}.desktop-break{display:none}.estate-consult .property-lawyer{gap:28px}.estate-consult .property-lawyer img{aspect-ratio:3/2}.consult-message p{margin-bottom:22px}}
+main{--ink:var(--story-ink);--sub:var(--story-body)}
+main .section:not(#property) .title{font-size:clamp(28px,calc(3.7vw - 3px),45px);line-height:1.4}
