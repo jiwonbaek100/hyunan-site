@@ -10,6 +10,30 @@
   const count = document.getElementById('summaryCount');
   let previousFocus;
 
+  const bar = document.getElementById('quickIntake');
+  const fields = bar.querySelectorAll('[data-field]');
+  function syncBar() {
+    for (const field of fields) {
+      const source = form.elements[field.dataset.field];
+      if (field.type === 'checkbox') field.checked = source.checked;
+      else field.value = source.value;
+    }
+  }
+  for (const field of fields) {
+    const target = form.elements[field.dataset.field];
+    field.addEventListener('input', () => {
+      if (field.type === 'checkbox') target.checked = field.checked;
+      else target.value = field.value;
+    });
+  }
+  form.addEventListener('input', syncBar);
+  bar.hidden = false;
+  const spacer = document.createElement('div');
+  bar.after(spacer);
+  function reserveSpace() { spacer.style.height = bar.offsetHeight + 'px'; }
+  reserveSpace();
+  new ResizeObserver(reserveSpace).observe(bar);
+
   function openModal(event) {
     if (event) event.preventDefault();
     previousFocus = document.activeElement;
@@ -20,7 +44,10 @@
     modal.classList.add('open');
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
-    setTimeout(() => form.elements.name.focus(), 80);
+    syncBar();
+    const focusField = bar.contains(previousFocus) && form.elements.name.value && form.elements.phone.value
+      ? summary : form.elements.name;
+    setTimeout(() => focusField.focus(), 80);
   }
 
   function closeModal() {
@@ -53,6 +80,7 @@
       const result = await response.json().catch(() => ({}));
       if (!response.ok) throw new Error(result.error || '접수하지 못했습니다.');
       form.reset();
+      syncBar();
       count.textContent = '0/1000';
       status.className = 'intake-status success';
       status.textContent = `상담 문의가 접수되었습니다. 확인 후 연락드리겠습니다. 접수번호 ${result.reference || ''}`;

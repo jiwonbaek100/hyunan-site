@@ -1,3 +1,14 @@
+<div class="quick-intake" id="quickIntake" hidden>
+  <div class="quick-intake__row" role="group" aria-label="빠른 상담 문의">
+    <strong>빠른 상담</strong>
+    <select aria-label="사건 분야" data-field="matterType">{% include matter-options.html %}</select>
+    <input aria-label="성함" placeholder="성함" autocomplete="name" maxlength="40" data-field="name">
+    <input aria-label="연락처" placeholder="연락처" type="tel" autocomplete="tel" maxlength="30" data-field="phone">
+    <label><input type="checkbox" data-field="privacy"> 개인정보 수집·이용 동의</label>
+    <a href="/privacy/" target="_blank" rel="noopener">보기</a>
+    <button type="button" data-intake-open aria-haspopup="dialog">상담 문의 작성</button>
+  </div>
+</div>
 <div class="intake-modal" id="intakeModal" data-nosnippet aria-hidden="true">
   <div class="intake-backdrop" data-intake-close></div>
   <section class="intake-panel" role="dialog" aria-modal="true" aria-labelledby="intakeTitle">
@@ -7,7 +18,7 @@
       <div class="intake-fields">
         <label><span>성함 *</span><input name="name" autocomplete="name" maxlength="40" required></label>
         <label><span>연락처 *</span><input name="phone" type="tel" autocomplete="tel" maxlength="30" placeholder="010-0000-0000" required></label>
-        <label class="intake-full"><span>사건 분야 (선택)</span><select name="matterType"><option value="기타">선택 안 함</option><option>부동산</option><option>형사</option><option>학교폭력</option><option>민사·집행</option><option>가사</option><option>기타</option></select></label>
+        <label class="intake-full"><span>사건 분야 (선택)</span><select name="matterType">{% include matter-options.html %}</select></label>
         <label class="intake-full"><span>문의 내용 * <b id="summaryCount">0/1000</b></span><textarea name="summary" maxlength="1000" required placeholder="현재 상황과 궁금한 점을 간단히 적어주세요. 조사일이나 제출기한이 정해져 있다면 함께 알려주세요."></textarea></label>
         <label class="intake-hp" aria-hidden="true"><span>회사</span><input name="company" tabindex="-1" autocomplete="off"></label>
       </div>
