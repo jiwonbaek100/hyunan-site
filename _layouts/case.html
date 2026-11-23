@@ -82,6 +82,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="{{ '/assets/case.css' | relative_url }}">
   <link rel="stylesheet" href="{{ '/assets/intake.css' | relative_url }}">
+<link rel="stylesheet" href="/assets/firm-footer.css">
 </head>
 <body>
   <a class="skip-link" href="#article-content">본문 바로가기</a>
@@ -118,7 +119,7 @@
       </div>
     </article>
   </main>
-  <footer class="site-footer"><div class="wrap footer-inner"><span>법률사무소 현안 · 경기도 성남시 분당구 서현로 216, 2층 201호</span><a href="tel:031-706-6544">031-706-6544</a></div><div class="wrap" style="padding:20px 0">{% include site-links.html %}</div></footer>
+  {% include firm-footer.html %}
   {% include intake-modal.html %}
   <script src="/assets/intake.js" defer></script>
 </body>
