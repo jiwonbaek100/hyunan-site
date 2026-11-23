@@ -53,3 +53,8 @@ main{--story-ink:#203343;--story-body:#394d5c;--story-accent:#254e70}
 @media(max-width:800px){.estate-copy{font-size:18px;line-height:1.84}.estate-copy h2,.consult-title,.property-life-copy .title{font-size:clamp(22px,5.7vw,27px)}.desktop-break{display:none}.estate-consult .property-lawyer{gap:28px}.estate-consult .property-lawyer img{aspect-ratio:3/2}.consult-message p{margin-bottom:22px}}
 main{--ink:var(--story-ink);--sub:var(--story-body)}
 main .section:not(#property) .title{font-size:clamp(28px,calc(3.7vw - 3px),45px);line-height:1.4}
+
+.home-slides img[src$="home-ahn-bookshelf.webp"] { object-position: 50% 14%; }
+@media (max-width: 760px) {
+  .home-slides img[src$="home-ahn-consult.webp"] { object-position: 65% center; }
+}
