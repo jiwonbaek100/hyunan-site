@@ -58,3 +58,25 @@ main .section:not(#property) .title{font-size:clamp(28px,calc(3.7vw - 3px),45px)
 @media (max-width: 760px) {
   .home-slides img[src$="home-ahn-consult.webp"] { object-position: 65% center; }
 }
+
+@media (prefers-reduced-motion: no-preference) {
+  .home-slides .home-hero-photo {
+    transform: none;
+    transition: opacity 850ms ease-in-out;
+  }
+  .home-slides .home-hero-photo.active {
+    animation: home-photo-drift 7s ease-out both;
+  }
+  @keyframes home-photo-drift {
+    from { scale: 1.035; }
+    to { scale: 1; }
+  }
+  .home-hero-copy > p, .home-hero-copy > h1 {
+    animation: home-title-arrive 720ms cubic-bezier(.2,.7,.2,1) backwards;
+  }
+  .home-hero-copy > h1 { animation-delay: 100ms; }
+  @keyframes home-title-arrive {
+    from { opacity: .2; translate: 0 12px; }
+    to { opacity: 1; translate: 0 0; }
+  }
+}
