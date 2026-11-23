@@ -62,6 +62,24 @@
   document.addEventListener('keydown', event => { if (event.key === 'Escape' && modal.classList.contains('open')) closeModal(); });
   summary.addEventListener('input', () => { count.textContent = `${summary.value.length}/1000`; });
 
+  const emailLink = document.getElementById('intakeEmail');
+  emailLink.addEventListener('click', event => {
+    if (!form.reportValidity()) {
+      event.preventDefault();
+      return;
+    }
+    const values = form.elements;
+    const body = [
+      '성함: ' + values.name.value,
+      '연락처: ' + values.phone.value,
+      '사건 분야: ' + values.matterType.value,
+      '', values.summary.value,
+      '', '개인정보 수집·이용 안내 및 상담 전 안내 사항을 확인했습니다.'
+    ].join('\r\n');
+    emailLink.href = 'mailto:desk@hyunan.kr?subject=' + encodeURIComponent('현안 홈페이지 상담 문의') + '&body=' + encodeURIComponent(body);
+    setTimeout(() => emailLink.href = 'mailto:desk@hyunan.kr', 0);
+  });
+
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (!form.reportValidity()) return;
@@ -78,7 +96,7 @@
     try {
       const response = await fetch(endpoint, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
       const result = await response.json().catch(() => ({}));
-      if (!response.ok) throw new Error(result.error || '접수하지 못했습니다.');
+      if (!response.ok || result.ok !== true || !result.reference) throw new Error(result.error || '접수번호를 확인하지 못했습니다.');
       form.reset();
       syncBar();
       count.textContent = '0/1000';
@@ -87,7 +105,9 @@
       submit.textContent = '접수 완료';
     } catch (error) {
       status.className = 'intake-status error';
-      status.textContent = `${error.message} 긴급한 경우 031-706-6544로 연락해 주세요.`;
+      status.textContent = error instanceof TypeError
+        ? '접수 서버와 연결되지 않아 접수 여부를 확인할 수 없습니다. 위의 이메일 작성 또는 전화로 문의해 주세요.'
+        : `${error.message} 위의 이메일 작성 또는 전화로도 문의하실 수 있습니다.`;
       submit.disabled = false;
       submit.textContent = '다시 접수하기';
     }
