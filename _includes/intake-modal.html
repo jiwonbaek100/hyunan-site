@@ -1,6 +1,11 @@
-<div class="quick-intake" id="quickIntake">
-  <div class="quick-intake__row" style="display:flex;justify-content:center;gap:1rem">
-    <strong>사건 문의</strong>
+<div class="quick-intake" id="quickIntake" hidden>
+  <div class="quick-intake__row" role="group" aria-label="빠른 상담 문의">
+    <strong>빠른 상담</strong>
+    <select aria-label="사건 분야" data-field="matterType">{% include matter-options.html %}</select>
+    <input aria-label="성함" placeholder="성함" autocomplete="name" maxlength="40" data-field="name">
+    <input aria-label="연락처" placeholder="연락처" type="tel" autocomplete="tel" maxlength="30" data-field="phone">
+    <label><input type="checkbox" data-field="privacy"> 개인정보 수집·이용 동의</label>
+    <a href="/privacy/" target="_blank" rel="noopener">보기</a>
     <button type="button" data-intake-open aria-haspopup="dialog">상담 문의 작성</button>
   </div>
 </div>
@@ -8,8 +13,19 @@
   <div class="intake-backdrop" data-intake-close></div>
   <section class="intake-panel" role="dialog" aria-modal="true" aria-labelledby="intakeTitle">
     <div class="intake-head"><div><p>TO. 법률사무소 현안</p><h2 id="intakeTitle">상담 문의</h2></div><button class="intake-close" type="button" data-intake-close aria-label="닫기">×</button></div>
-    <p class="intake-guide">문의 접수만으로 변호사 선임 관계가 성립하지 않습니다. 이해충돌 확인 전에는 민감한 비밀정보를 보내지 마세요. <a href="https://docs.google.com/forms/d/e/1FAIpQLSdDdrtQQ91HjncLYvAWls5DtCnWVcPm0p8sC_1GCm2gWxeX6A/viewform" target="_blank" rel="noopener">구글폼 새 창에서 열기</a></p>
-    <iframe id="intakeGoogleForm" title="법률사무소 현안 사건 문의 구글폼" data-src="https://docs.google.com/forms/d/e/1FAIpQLSdDdrtQQ91HjncLYvAWls5DtCnWVcPm0p8sC_1GCm2gWxeX6A/viewform?embedded=true" style="width:100%;height:65vh;border:0;background:white"></iframe>
+    <p class="intake-guide">어떤 일로 상담이 필요하신가요? 간단히 남겨주시면 확인 후 연락드리겠습니다.</p>
+    <form id="intakeForm" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSdDdrtQQ91HjncLYvAWls5DtCnWVcPm0p8sC_1GCm2gWxeX6A/formResponse">
+      <div class="intake-fields">
+        <label><span>성함 *</span><input id="intake-name" name="entry.2094830673" autocomplete="name" maxlength="40" required></label>
+        <label><span>연락처 *</span><input id="intake-phone" name="entry.627288892" type="tel" autocomplete="tel" maxlength="30" placeholder="010-0000-0000" required></label>
+        <label class="intake-full"><span>사건 분야 (선택)</span><select id="intake-matterType" name="entry.1326274766">{% include matter-options.html %}</select></label>
+        <label class="intake-full"><span>문의 내용 * <b id="summaryCount">0/1000</b></span><textarea id="intake-summary" name="entry.1857893951" maxlength="1000" required placeholder="현재 상황과 궁금한 점을 간단히 적어주세요. 조사일이나 제출기한이 정해져 있다면 함께 알려주세요."></textarea></label>
+      </div>
+      <label class="intake-check"><input type="checkbox" id="intake-privacy" name="entry.445803827" value="현안의 개인정보 수집·이용 안내를 확인하고 동의합니다." required><span><a href="/privacy/" target="_blank">개인정보 수집·이용 안내</a>에 동의합니다. *</span></label>
+      <button class="intake-submit" type="submit">상담 문의 보내기</button>
+      <p class="intake-guide"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdDdrtQQ91HjncLYvAWls5DtCnWVcPm0p8sC_1GCm2gWxeX6A/viewform" target="_blank" rel="noopener">구글폼 새 창에서 열기</a> · <a href="tel:031-706-6544">031-706-6544</a></p>
+    </form>
   </section>
 </div>
+
 <noscript><a href="https://docs.google.com/forms/d/e/1FAIpQLSdDdrtQQ91HjncLYvAWls5DtCnWVcPm0p8sC_1GCm2gWxeX6A/viewform">구글폼으로 사건 문의하기</a></noscript>
